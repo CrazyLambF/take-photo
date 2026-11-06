@@ -6,6 +6,10 @@ import { defineConfig } from 'vitest/config'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // 部署基准路径。GitHub Pages 项目站点在 /<repo>/ 子路径下，
+  // 由 CI 注入 VITE_BASE_PATH=/take-photo/；本地开发默认根路径。
+  // 注意：路由用 createWebHistory(BASE_URL)，改这里会同时影响路由前缀。
+  base: process.env.VITE_BASE_PATH || '/',
   plugins: [
     vue(),
     Components({

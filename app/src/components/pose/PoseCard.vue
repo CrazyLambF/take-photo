@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useFavoritesStore } from '@/stores/favorites'
 import { usePosesStore } from '@/stores/poses'
+import { asset, placeholder } from '@/utils/asset'
 import type { Pose } from '@/types/pose'
 
 /**
@@ -19,7 +20,7 @@ const categoryName = computed(() => {
 })
 
 const coverSrc = computed(() =>
-  props.pose.images.cover ? `/${props.pose.images.cover}` : '/poses/placeholder.svg',
+  props.pose.images.cover ? asset(props.pose.images.cover) : placeholder(),
 )
 </script>
 

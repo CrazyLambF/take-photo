@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import { asset, placeholder } from '@/utils/asset'
 import type { Pose } from '@/types/pose'
 
 /** 相关推荐：横向滑动的迷你卡（算法 v1 结果由父级传入） */
@@ -15,7 +16,7 @@ function go(p: Pose): void {
   <div class="rec-list" role="list">
     <button v-for="p in props.poses" :key="p.id" type="button" class="rec" role="listitem" @click="go(p)">
       <img
-        :src="p.images.cover ? `/${p.images.cover}` : '/poses/placeholder.svg'"
+        :src="p.images.cover ? asset(p.images.cover) : placeholder()"
         :alt="p.name"
         loading="lazy"
         width="120"

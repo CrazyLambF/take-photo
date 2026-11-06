@@ -14,6 +14,7 @@ import { usePosesStore } from '@/stores/poses'
 import { useFavoritesStore } from '@/stores/favorites'
 import { useCompareStore } from '@/stores/compare'
 import { recommendPoses } from '@/lib/recommend'
+import { asset, placeholder } from '@/utils/asset'
 import type { PoseAnnotation, PoseAnnotationsData } from '@/types/pose'
 
 /**
@@ -82,7 +83,7 @@ interface Frame {
 const frames = computed<Frame[]>(() => {
   const p = pose.value
   if (!p) return []
-  const cover = p.images.cover ? `/${p.images.cover}` : '/poses/placeholder.svg'
+  const cover = p.images.cover ? asset(p.images.cover) : placeholder()
   const isFraming = FRAMING_CATEGORIES.has(p.category)
   const list: Frame[] = [{ key: 'cover', label: '示例图', src: cover }]
 
@@ -90,7 +91,7 @@ const frames = computed<Frame[]>(() => {
     // 特写类：用「取景示意」替代「线稿示意」，复用封面叠画框/三分线
     list.push({ key: 'framing', label: '取景示意', src: cover })
   } else if (p.images.lineArt) {
-    list.push({ key: 'lineart', label: '线稿示意', src: `/${p.images.lineArt}` })
+    list.push({ key: 'lineart', label: '线稿示意', src: asset(p.images.lineArt) })
   } else {
     list.push({
       key: 'lineart',

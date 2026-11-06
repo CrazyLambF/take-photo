@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import PageContainer from '@/components/layout/PageContainer.vue'
 import PoseWaterfall from '@/components/pose/PoseWaterfall.vue'
 import { usePosesStore, CATEGORY_ORDER } from '@/stores/poses'
+import { asset, placeholder } from '@/utils/asset'
 import type { CategoryId, Pose } from '@/types/pose'
 
 /**
@@ -74,7 +75,7 @@ function goCat(id: CategoryId): void {
       </div>
       <div class="daily" :class="{ swapping }">
         <button v-for="p in dailyPicks" :key="p.id" type="button" class="pick" @click="router.push(`/poses/${p.id}`)">
-          <img :src="p.images.cover ? `/${p.images.cover}` : '/poses/placeholder.svg'" :alt="p.name" loading="lazy" width="320" height="426" />
+          <img :src="p.images.cover ? asset(p.images.cover) : placeholder()" :alt="p.name" loading="lazy" width="320" height="426" />
           <span class="pn">{{ p.name }}</span>
           <span class="pc">{{ p.id }}</span>
         </button>

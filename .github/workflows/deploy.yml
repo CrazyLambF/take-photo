@@ -1,0 +1,70 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Pages 部署所需的最小权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时刻只跑一个部署，但不要取消正在进行的（避免半成品发布）
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: app/pnpm-lock.yaml
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 单元测试
+        run: pnpm test
+
+      # 项目站点在 https://<user>.github.io/take-photo/ 子路径下，
+      # 必须注入 base，否则所有资源按 /assets/ 请求会 404
+      - name: 构建（子路径 base）
+        run: pnpm build
+        env:
+          VITE_BASE_PATH: /take-photo/
+
+      # 路由是 createWebHistory，直接刷新 /poses/ST-01 这类深层链接时
+      # GitHub Pages 找不到实体文件会 404；用 index.html 兜底交给前端路由接管
+      - name: SPA 深层链接兜底
+        run: cp dist/index.html dist/404.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

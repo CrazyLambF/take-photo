@@ -75,14 +75,33 @@ curl -o tools/models/pose_landmarker_full.task \
 
 ## 部署
 
-应用是纯静态站点，`pnpm build` 产物在 `app/dist/`。
+应用是纯静态站点，`pnpm build` 产物在 `app/dist/`，已配置 GitHub Pages 自动部署。
 
-- **部署到域名根路径**：直接上传 `app/dist/` 即可（`base` 默认 `/`）。
-- **部署到子路径**（如 GitHub Pages 的 `/<repo>/`）：需在 `app/vite.config.ts` 设 `base: '/<repo>/'` 后重新构建，否则资源 404。
+- **线上地址**：https://crazylambf.github.io/take-photo/
+- **触发方式**：推送到 `main` 分支自动构建部署（也可在 Actions 页手动 `workflow_dispatch`）
+- **工作流**：`.github/workflows/deploy.yml`（install → test → build → 传产物 → 发布）
+
+### 为什么需要 base
+
+仓库是 GitHub Pages **项目站点**，跑在 `https://crazylambf.github.io/take-photo/` 子路径下，不是域名根路径。因此：
+
+1. CI 构建时注入 `VITE_BASE_PATH=/take-photo/`，`vite.config.ts` 读取后传给 `base`；
+2. 所有静态资源必须经 `src/utils/asset.ts` 的 `asset()` 拼接 `import.meta.env.BASE_URL`。**不要写成 `/${path}` 的根路径**——本地根路径部署下看不出问题，一上线就全部 404。
+3. 构建后把 `index.html` 复制成 `404.html`。路由用 `createWebHistory`，直接刷新 `/poses/ST-01` 这类深层链接时 Pages 找不到实体文件，靠 404.html 兜底让前端路由接管。
+
+本地预览线上行为：
 
 ```bash
-npm run build -- --base=/<repo>/    # 或在 vite.config.ts 里写死
+cd app
+VITE_BASE_PATH=/take-photo/ pnpm build
+pnpm preview      # 预览地址是 http://localhost:4173/take-photo/
 ```
+
+部署到域名根路径（如自有域名）时，去掉 env 变量直接 `pnpm build` 即可。
+
+### 首次启用 Pages
+
+仓库 Settings → Pages → **Source 选 “GitHub Actions”**（只需设置一次）。此后推 `main` 即自动发布。
 
 ## 素材说明
 

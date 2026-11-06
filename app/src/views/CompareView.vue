@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import PageContainer from '@/components/layout/PageContainer.vue'
 import { usePosesStore } from '@/stores/poses'
+import { asset, placeholder } from '@/utils/asset'
 import type { Pose } from '@/types/pose'
 
 /** 对比页（§5.4 / P1）：2–3 个姿势并排对比 */
@@ -60,7 +61,7 @@ function cell(pose: Pose, key: (typeof ROWS)[number]['key']): string {
       <div v-for="p in poses" :key="p.id" class="col">
         <button type="button" class="rm" :aria-label="`移除 ${p.id}`" @click="removeOne(p.id)">✕</button>
         <RouterLink :to="`/poses/${p.id}`">
-          <img :src="p.images.cover ? `/${p.images.cover}` : '/poses/placeholder.svg'" :alt="p.name" width="320" height="426" />
+          <img :src="p.images.cover ? asset(p.images.cover) : placeholder()" :alt="p.name" width="320" height="426" />
         </RouterLink>
         <h2>
           <RouterLink :to="`/poses/${p.id}`">{{ p.name }}</RouterLink>
