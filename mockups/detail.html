@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>摆拍手册 PoseGuide · 姿势详情</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23B4552F'/%3E%3Ccircle cx='12' cy='12' r='4.5' fill='%23FAF7F1'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<script>
+  document.documentElement.classList.add('js');
+  try { var t = localStorage.getItem('pg-theme');
+    if (t) document.documentElement.dataset.theme = t;
+    else if (matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'dark';
+  } catch (e) {}
+</script>
+<style>
+/* ---------- 姿势详情（§3.1 / §5.2：图集轮播 → 机位卡 → 步骤 → 避坑 → 小贴士 → 推荐） ---------- */
+.crumbs { display: flex; align-items: center; gap: var(--sp-2); padding-top: var(--sp-5); font-size: var(--fs-13); color: var(--c-ink-3); flex-wrap: wrap; }
+.crumbs a:hover { color: var(--c-accent-deep); }
+.crumbs b { color: var(--c-ink); font-weight: 600; }
+.crumb-back { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding-inline: 10px 8px; margin-left: -10px; color: var(--c-ink-2); border-radius: var(--r-full); }
+.crumb-back:hover { color: var(--c-ink); background: var(--c-bg-soft); }
+.pn { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; padding: 8px 12px; border: 1px solid var(--c-line-strong); border-radius: var(--r-full); color: var(--c-ink-2); font-size: var(--fs-12); transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out); }
+.pn:hover { border-color: var(--c-ink-3); color: var(--c-ink); }
+.pn + .pn { margin-left: 0; }
+
+.detail-layout { margin-top: var(--sp-4); }
+@media (min-width: 1200px) {
+  .detail-layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--sp-12); align-items: start; }
+  .gallery-col { position: sticky; top: calc(var(--topnav-h) + 24px); }
+}
+
+/* 图集轮播（§5.2：示例 → 线稿 → 错误示范） */
+.gallery { position: relative; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-1); touch-action: pan-y; cursor: zoom-in; }
+.g-track { display: flex; will-change: transform; }
+.g-slide { flex: 0 0 100%; aspect-ratio: 3 / 4; margin: 0; }
+.g-slide svg { width: 100%; height: 100%; }
+@media (min-width: 1200px) { .g-slide { aspect-ratio: 4 / 5; } }
+.g-counter { position: absolute; top: 12px; right: 12px; padding: 4px 12px; border-radius: var(--r-full);
+  background: rgba(23,19,14,.55); color: #fff; font-size: var(--fs-12); backdrop-filter: blur(4px); }
+.g-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(255,255,255,.92); color: var(--c-ink); display: grid; place-items: center; box-shadow: var(--shadow-2);
+  opacity: 0; transition: opacity var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out); cursor: pointer; }
+.g-btn:hover { transform: translateY(-50%) scale(1.06); }
+.g-btn:active { transform: translateY(-50%) scale(.94); }
+.g-prev { left: 12px; } .g-next { right: 12px; }
+.gallery:hover .g-btn, .gallery:focus-within .g-btn { opacity: 1; }
+@media (max-width: 767.98px) { .g-btn { display: none; } }
+.g-dots { display: flex; justify-content: center; gap: 8px; padding-top: var(--sp-3); }
+.g-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c-line-strong); transition: all var(--dur-base) var(--ease-out); }
+.g-dot[aria-selected="true"] { background: var(--c-accent); width: 22px; border-radius: var(--r-full); }
+.g-hint { text-align: center; font-size: var(--fs-12); color: var(--c-ink-3); padding-top: var(--sp-2); }
+
+/* 信息栏 */
+.d-tags { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
+.tag { display: inline-flex; align-items: center; min-height: 26px; padding-inline: 10px; border-radius: var(--r-full);
+  background: var(--c-bg-soft); color: var(--c-ink-2); font-size: var(--fs-12); }
+.tag.cat-tag { background: var(--c-accent-soft); color: var(--c-accent-deep); font-weight: 600; }
+.d-name { font-size: var(--fs-28); margin-top: var(--sp-3); letter-spacing: .02em; }
+.d-id { font-size: var(--fs-12); color: var(--c-ink-3); letter-spacing: .1em; margin-top: 2px; }
+.d-meta { display: flex; align-items: center; gap: var(--sp-2); flex-wrap: wrap; margin-top: var(--sp-3); font-size: var(--fs-13); color: var(--c-ink-2); }
+.d-meta .sep { color: var(--c-line-strong); }
+@media (min-width: 1200px) { .d-name { font-size: var(--fs-34); } }
+
+/* 机位卡（差异化核心） */
+.d-block { margin-top: var(--sp-6); }
+.d-block > h2 { display: flex; align-items: center; gap: 8px; font-size: var(--fs-18); margin-bottom: var(--sp-3); }
+.d-block > h2 svg { color: var(--c-accent-deep); }
+.cam-card { background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-lg); padding: var(--sp-4); box-shadow: var(--shadow-1); }
+.cam-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+.cam-row { display: grid; grid-template-columns: 64px 1fr; gap: var(--sp-3); padding-block: 9px; border-bottom: 1px dashed var(--c-line); font-size: var(--fs-14); }
+.cam-row:last-child { border-bottom: 0; }
+.cam-row span { color: var(--c-ink-3); font-size: var(--fs-12); padding-top: 2px; }
+.cam-row b { font-weight: 500; }
+.cam-diagram { margin-top: var(--sp-3); }
+.cam-diagram svg { width: 100%; max-width: 220px; }
+@media (min-width: 768px) {
+  .cam-card-inner { display: grid; grid-template-columns: 1fr auto; gap: var(--sp-4); align-items: start; }
+  .cam-diagram svg { max-width: 200px; }
+}
+
+/* 步骤条 */
+.stepper { position: relative; padding-left: 40px; }
+.stepper::before { content: ""; position: absolute; left: 15px; top: 22px; bottom: 18px; width: 2px; background: var(--c-line); }
+.step { position: relative; padding-bottom: var(--sp-4); }
+.step:last-child { padding-bottom: 0; }
+.step i { position: absolute; left: -40px; top: 0; width: 32px; height: 32px; border-radius: 50%;
+  background: var(--c-surface); border: 2px solid var(--c-accent); color: var(--c-accent-deep);
+  font-style: normal; font-weight: 700; font-size: var(--fs-14); display: grid; place-items: center; }
+.step p { font-size: var(--fs-15); padding-top: 4px; }
+
+/* 避坑区 */
+.mis-wrap { display: grid; gap: var(--sp-4); }
+@media (min-width: 768px) { .mis-wrap { grid-template-columns: 1fr 190px; align-items: start; } }
+.mis-list li { display: flex; gap: 10px; padding-block: 8px; font-size: var(--fs-14); color: var(--c-ink-2); border-bottom: 1px dashed var(--c-line); }
+.mis-list li:last-child { border-bottom: 0; }
+.mis-list svg { flex-shrink: 0; margin-top: 4px; color: var(--c-danger); }
+.mis-fig { margin: 0; }
+.mis-fig .mfig { border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-1); }
+.mis-fig svg { width: 100%; }
+.mis-fig figcaption { font-size: var(--fs-12); color: var(--c-ink-3); text-align: center; padding-top: 6px; }
+
+/* 小贴士 */
+.tips { background: var(--c-sage-soft); border-radius: var(--r-lg); padding: var(--sp-4) var(--sp-5); }
+.tips h2 { color: var(--c-sage); font-size: var(--fs-15); font-family: var(--font-sans); font-weight: 700; letter-spacing: .04em; }
+.tips ul { margin-top: var(--sp-2); }
+.tips li { position: relative; padding-left: 18px; font-size: var(--fs-14); padding-block: 4px; }
+.tips li::before { content: ""; position: absolute; left: 2px; top: 13px; width: 6px; height: 6px; border-radius: 50%; background: var(--c-sage); }
+
+/* 操作区：移动固定底栏 / 桌面右栏 sticky */
+.d-actions { margin-top: var(--sp-6); display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-2); }
+@media (min-width: 1200px) {
+  .d-actions { position: sticky; bottom: var(--sp-4); background: color-mix(in srgb, var(--c-surface) 92%, transparent);
+    backdrop-filter: blur(10px); border: 1px solid var(--c-line); border-radius: var(--r-lg); padding: var(--sp-2);
+    box-shadow: var(--shadow-2); z-index: 5; }
+}
+.act { display: flex; flex-direction: column; align-items: center; gap: 3px; min-height: 56px; padding: 8px 4px;
+  border-radius: var(--r-md); color: var(--c-ink-2); font-size: var(--fs-11); transition: background var(--dur-fast) var(--ease-out), color var(--dur-base) var(--ease-out), transform var(--dur-fast) var(--ease-out); }
+.act svg { width: 21px; height: 21px; }
+.act:hover { background: var(--c-bg-soft); color: var(--c-ink); }
+.act:active { transform: scale(.93); }
+.act.on { color: var(--c-accent); }
+.act.added { color: var(--c-accent); }
+.m-actionbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--z-compare);
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-2);
+  padding: 6px var(--sp-3) calc(6px + env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--c-surface) 94%, transparent);
+  backdrop-filter: blur(16px); border-top: 1px solid var(--c-line);
+}
+@media (min-width: 1200px) { .m-actionbar { display: none; } }
+@media (max-width: 1199.98px) { .d-actions { display: none; } }
+
+/* 相关推荐 */
+.related { margin-top: var(--sp-12); }
+.rel-row { display: flex; gap: var(--sp-3); overflow-x: auto; padding-bottom: var(--sp-3); scrollbar-width: none; }
+.rel-row::-webkit-scrollbar { display: none; }
+.rel-card { flex: 0 0 148px; }
+.rel-cover { border-radius: var(--r-md); overflow: hidden; aspect-ratio: 3 / 4; box-shadow: var(--shadow-1);
+  transition: box-shadow var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out); }
+.rel-cover svg { width: 100%; height: 100%; }
+.rel-card:hover .rel-cover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
+.rel-info { padding-top: var(--sp-2); }
+.rel-name { font-family: var(--font-serif); font-size: var(--fs-13); font-weight: 600; display: block; }
+
+/* 图集点击放大（Vant ImagePreview 的原型对应） */
+.lightbox { position: fixed; inset: 0; z-index: var(--z-lightbox); background: rgba(16, 12, 8, .92);
+  display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity var(--dur-base) var(--ease-out); }
+.lightbox.open { opacity: 1; pointer-events: auto; }
+.lightbox .lb-fig { max-width: min(86vw, 640px); transform: scale(.96); transition: transform var(--dur-base) var(--ease-out); }
+.lightbox.open .lb-fig { transform: scale(1); }
+.lightbox svg { width: 100%; border-radius: var(--r-md); }
+.lb-cap { text-align: center; color: #EFE6D9; font-size: var(--fs-13); padding-top: var(--sp-3); }
+.lb-close { position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(255,255,255,.12); color: #fff; display: grid; place-items: center; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="topnav">
+  <div class="container topnav-in">
+    <a class="brand" href="index.html" data-nav><span class="brand-cn">摆拍手册</span><span class="brand-en">PoseGuide</span></a>
+    <nav class="topnav-links" aria-label="主导航">
+      <a href="home.html" data-nav>首页 · 发现</a>
+      <a href="library.html" data-nav aria-current="page">姿势库</a>
+      <a href="#" data-toast="「收藏与清单」页未包含在本轮 4 页原型中（见设计说明·待确认）">收藏与清单</a>
+      <a href="#" data-toast="「我的」页未包含在本轮 4 页原型中（见设计说明·待确认）">我的</a>
+    </nav>
+    <button class="topnav-search" data-toast="搜索页为 P0（计划 §3.1），本轮原型未包含" aria-label="搜索姿势、标签">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20.3 20.3-3.9-3.9"/></svg>
+      <span>搜索姿势 / 标签 / 拼音首字母</span>
+    </button>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深色模式"></button>
+  </div>
+</header>
+
+<header class="m-header">
+  <button class="icon-btn" id="btnBack" aria-label="返回上一页"></button>
+  <span class="m-title">姿势详情</span>
+  <span style="margin-left:auto"></span>
+  <button class="icon-btn" data-theme-toggle aria-label="切换深色模式"></button>
+</header>
+
+<main id="main" class="container">
+  <nav class="crumbs" data-reveal aria-label="面包屑" id="crumbs"></nav>
+
+  <div class="detail-layout">
+    <!-- 左：图集（桌面 sticky 约 60%） -->
+    <section class="gallery-col" data-reveal aria-label="姿势图集">
+      <div class="gallery" id="gallery" tabindex="0" role="region" aria-roledescription="轮播" aria-label="姿势图集，共 3 张">
+        <div class="g-track" id="gTrack"></div>
+        <span class="g-counter" id="gCounter">1 / 3</span>
+        <button class="g-btn g-prev" id="gPrev" aria-label="上一张"></button>
+        <button class="g-btn g-next" id="gNext" aria-label="下一张"></button>
+      </div>
+      <div class="g-dots" id="gDots"></div>
+      <p class="g-hint">左右滑动或点箭头切换 · 点击图片放大查看</p>
+    </section>
+
+    <!-- 右：信息栏（桌面 sticky 操作按钮） -->
+    <section class="info-col">
+      <header data-reveal>
+        <div class="d-tags" id="dTags"></div>
+        <h1 class="d-name" id="dName"></h1>
+        <p class="d-id" id="dId"></p>
+        <div class="d-meta" id="dMeta"></div>
+      </header>
+
+      <div class="d-block" data-reveal>
+        <h2><span id="camIcon"></span>机位卡</h2>
+        <div class="cam-card"><div class="cam-grid" id="camGrid"></div></div>
+      </div>
+
+      <div class="d-block" data-reveal>
+        <h2>分步要点</h2>
+        <ol class="stepper" id="steps"></ol>
+      </div>
+
+      <div class="d-block" data-reveal>
+        <h2>避坑区</h2>
+        <div class="mis-wrap">
+          <ul class="mis-list" id="misList"></ul>
+          <figure class="mis-fig" id="misFig"></figure>
+        </div>
+      </div>
+
+      <div class="d-block tips" data-reveal>
+        <h2><span id="bulbIcon"></span>构图小贴士</h2>
+        <ul id="tipsList"></ul>
+      </div>
+
+      <div class="d-actions" data-reveal id="dActions"></div>
+    </section>
+  </div>
+
+  <section class="related" aria-labelledby="h-rel">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">More Like This</p>
+      <h2 id="h-rel">相关推荐</h2>
+      <span class="meta">同分类 · 共享标签 ≥ 2</span>
+    </div>
+    <div class="rel-row" id="relRow"></div>
+  </section>
+</main>
+
+<!-- 移动底部操作栏（§5.2） -->
+<div class="m-actionbar" id="mActions" role="toolbar" aria-label="详情操作"></div>
+
+<!-- 点击放大 -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="查看大图">
+  <figure class="lb-fig"><div id="lbBody"></div><figcaption class="lb-cap" id="lbCap"></figcaption></figure>
+  <button class="lb-close" id="lbClose" aria-label="关闭大图"></button>
+</div>
+
+<nav class="tabbar" aria-label="底部导航"></nav>
+
+<script src="assets/mock-data.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/preview.js"></script>
+<script>
+(function () {
+  const PG = window.PG, D = PG.data;
+  const $ = (s) => document.querySelector(s);
+  const $$ = (s) => Array.from(document.querySelectorAll(s));
+  const REDUCED = PG.REDUCED;
+
+  /* ---------- 数据 ---------- */
+  const id = new URLSearchParams(location.search).get('id');
+  const p = D.POSES.find(x => x.id === id) || D.POSES.find(x => x.id === 'ST-02');
+  const cat = D.CAT_MAP[p.cat];
+  document.title = `摆拍手册 PoseGuide · ${p.name}`;
+
+  /* ---------- 顶栏图标 / Tabbar / 返回 ---------- */
+  $('#btnBack').innerHTML = PG.I('arrowL', 20);
+  $('#btnBack').addEventListener('click', () => history.length > 1 ? history.back() : location.href = 'library.html');
+  $('#camIcon').innerHTML = PG.I('camera', 19);
+  $('#bulbIcon').innerHTML = PG.I('bulb', 17);
+  $('#gPrev').innerHTML = PG.I('chevL', 20);
+  $('#gNext').innerHTML = PG.I('chevR', 20);
+  $('#lbClose').innerHTML = PG.I('close', 22);
+  $('.tabbar').innerHTML = [
+    `<a href="home.html" data-nav>${PG.I('compass', 22)}首页</a>`,
+    `<a href="library.html" data-nav aria-current="page">${PG.I('grid', 22)}姿势库</a>`,
+    `<a href="#" data-toast="「收藏与清单」页未包含在本轮原型">${PG.I('heart', 22)}收藏<span class="tab-badge" data-fav-badge hidden></span></a>`,
+    `<a href="#" data-toast="「我的」页未包含在本轮原型">${PG.I('user', 22)}我的</a>`,
+  ].join('');
+  PG.updateFavBadge && PG.updateFavBadge();
+
+  /* ---------- 面包屑 + 同类上一个/下一个（§5.2 手势的按钮替代） ---------- */
+  const siblings = D.POSES.filter(x => x.cat === p.cat).sort((a, b) => a.id.localeCompare(b.id));
+  const idx = siblings.findIndex(x => x.id === p.id);
+  const prev = siblings[(idx - 1 + siblings.length) % siblings.length];
+  const next = siblings[(idx + 1) % siblings.length];
+  $('#crumbs').innerHTML = `
+    <button class="crumb-back" id="crumbBack">${PG.I('arrowL', 16)}返回</button>
+    <a href="library.html" data-nav>姿势库</a><span>/</span>
+    <a href="library.html?cat=${cat.id}" data-nav>${cat.name}</a><span>/</span><b>${p.name}</b>
+    <a class="pn" href="detail.html?id=${prev.id}" data-nav title="同类上一个">${PG.I('chevL', 14)}${prev.name}</a>
+    <a class="pn" href="detail.html?id=${next.id}" data-nav title="同类下一个">${next.name}${PG.I('chevR', 14)}</a>`;
+  $('#crumbBack').addEventListener('click', () => history.length > 1 ? history.back() : location.href = 'library.html');
+
+  /* ---------- 头部 ---------- */
+  $('#dTags').innerHTML = `<a class="tag cat-tag" href="library.html?cat=${cat.id}" data-nav>${cat.name}</a>` +
+    p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+  $('#dName').textContent = p.name;
+  $('#dId').textContent = `${p.id} · ${cat.name}`;
+  $('#dMeta').innerHTML = `${PG.dots(p.diff)}<span>难度 ${p.diff}/3</span><span class="sep">·</span>
+    <span>${p.people === 1 ? '单人' : p.people === 2 ? '双人' : '多人'}</span><span class="sep">·</span>
+    <span>${p.gear.map(g => g === 'phone' ? '手机' : '相机').join(' / ')}</span><span class="sep">·</span>
+    <span>${p.light.join('、')}</span>`;
+
+  /* ---------- 机位卡 ---------- */
+  $('#camGrid').innerHTML = `
+    <div class="cam-row"><span>焦段</span><b>${p.focal}</b></div>
+    <div class="cam-row"><span>机位</span><b>${p.cam.split('，')[0]}</b></div>
+    <div class="cam-row"><span>构图</span><b>${p.cam.split('，').slice(1).join('，') || '—'}</b></div>
+    <div class="cam-row"><span>参数</span><b>${p.set || '—'}</b></div>
+    <div class="cam-diagram">${D.framingSVG(p)}</div>`;
+
+  /* ---------- 步骤 / 避坑 / 小贴士 ---------- */
+  $('#steps').innerHTML = p.steps.map((s, i) => `<li class="step"><i>${i + 1}</i><p>${s}</p></li>`).join('');
+  $('#misList').innerHTML = p.mistakes.map(m => `<li>${PG.I('close', 15).replace('<svg', '<svg width="15" height="15"')}<span>${m}</span></li>`).join('');
+  $('#misFig').innerHTML = `<div class="mfig">${D.poseSVG(p, 'wrong')}</div><figcaption>错误示范 · 红色标记区为常见问题</figcaption>`;
+  $('#tipsList').innerHTML = (D.TIPS[p.cat] || []).map(t => `<li>${t}</li>`).join('');
+
+  /* ---------- 操作区（两处：桌面 sticky / 移动底栏） ---------- */
+  const acts = (labels) => `
+    <button class="act ${PG.favs.has(p.id) ? 'on' : ''}" data-fav="${p.id}" aria-pressed="${PG.favs.has(p.id)}">
+      ${PG.I('heart', 21)}<span data-fav-label>${PG.favs.has(p.id) ? '已收藏' : '收藏'}</span>
+    </button>
+    <button class="act" data-toast="待拍清单为 P1 功能：加入后可在「收藏与清单」逐条打勾（原型未含该页）">
+      ${PG.I('bookmark', 21)}<span>${labels ? '加入清单' : '清单'}</span>
+    </button>
+    <button class="act" data-compare-add="${p.id}" aria-pressed="false">
+      ${PG.I('compare', 21)}<span data-cmp-label>对比</span>
+    </button>
+    <button class="act" data-toast="分享卡片为 P1：Canvas 合成姿势卡（封面＋要点＋二维码）">
+      ${PG.I('share', 21)}<span>${labels ? '分享' : '分享'}</span>
+    </button>`;
+  $('#dActions').innerHTML = acts(true);
+  $('#mActions').innerHTML = acts(false);
+  function syncActionLabels() {
+    const on = PG.favs.has(p.id);
+    $$('[data-fav-label]').forEach(el => el.textContent = on ? '已收藏' : '收藏');
+    document.dispatchEvent(new Event('pg:sync-cmp'));
+  }
+  document.addEventListener('pg:fav', syncActionLabels);
+  document.addEventListener('pg:compare', () => {
+    const on = PG.cmpHas(p.id);
+    $$('[data-cmp-label]').forEach(el => el.textContent = on ? '已在对比' : '对比');
+  });
+  if (PG.cmpHas(p.id)) $$('[data-cmp-label]').forEach(el => el.textContent = '已在对比');
+
+  /* ---------- 图集轮播 ---------- */
+  const slides = [
+    { html: D.poseSVG(p, 'cover'), cap: `${p.name} · 示例图（AI 生成占位）`, ai: p.ai },
+    { html: D.poseSVG(p, 'line'), cap: `${p.name} · 线稿标注图` },
+    { html: D.poseSVG(p, 'wrong'), cap: `${p.name} · 错误示范` },
+  ];
+  const track = $('#gTrack'), gallery = $('#gallery'), dotsBox = $('#gDots'), counter = $('#gCounter');
+  track.innerHTML = slides.map((s, i) => `
+    <figure class="g-slide" data-i="${i}" aria-label="${s.cap}">${s.html}${i === 0 && s.ai ? `<span class="badge-ai" style="position:absolute;top:12px;left:12px">${PG.I('sparkle', 11)}AI 示意</span>` : ''}</figure>`).join('');
+  dotsBox.innerHTML = slides.map((s, i) => `<button class="g-dot" role="tab" aria-selected="${i === 0}" aria-label="第 ${i + 1} 张：${s.cap}"></button>`).join('');
+
+  let cur = 0, W = gallery.clientWidth, dragging = false, startX = 0, dx = 0, moved = false;
+  const N = slides.length;
+  function go(i, animate = true) {
+    cur = (i + N) % N;
+    track.style.transition = animate && !REDUCED ? 'transform var(--dur-slow) var(--ease-inout)' : 'none';
+    track.style.transform = `translateX(${-cur * 100}%)`;
+    counter.textContent = `${cur + 1} / ${N}`;
+    Array.from(dotsBox.children).forEach((d, k) => d.setAttribute('aria-selected', String(k === cur)));
+    Array.from(track.children).forEach((sl, k) => sl.setAttribute('aria-hidden', String(k !== cur)));
+  }
+  $('#gPrev').addEventListener('click', () => go(cur - 1));
+  $('#gNext').addEventListener('click', () => go(cur + 1));
+  dotsBox.addEventListener('click', (e) => {
+    const d = Array.from(dotsBox.children).indexOf(e.target.closest('.g-dot'));
+    if (d > -1) go(d);
+  });
+  gallery.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(cur - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(cur + 1); }
+  });
+  addEventListener('resize', () => { W = gallery.clientWidth; go(cur, false); });
+
+  /* 拖拽滑动（Pointer Events，兼容触屏与鼠标） */
+  gallery.addEventListener('pointerdown', (e) => {
+    if (e.button !== 0) return;
+    dragging = true; moved = false; startX = e.clientX; dx = 0;
+    track.style.transition = 'none';
+    gallery.setPointerCapture(e.pointerId);
+  });
+  gallery.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    dx = e.clientX - startX;
+    if (Math.abs(dx) > 8) moved = true;
+    const resist = (cur === 0 && dx > 0) || (cur === N - 1 && dx < 0) ? 0.35 : 1;
+    track.style.transform = `translateX(calc(${-cur * 100}% + ${dx * resist}px))`;
+  });
+  gallery.addEventListener('pointerup', () => {
+    if (!dragging) return;
+    dragging = false;
+    if (dx < -60) go(cur + 1); else if (dx > 60) go(cur - 1); else go(cur);
+    dx = 0;
+  });
+  gallery.addEventListener('pointercancel', () => { dragging = false; go(cur); });
+
+  /* 点击放大（拖拽后抑制误触） */
+  const lb = $('#lightbox');
+  gallery.addEventListener('click', (e) => {
+    if (moved) { moved = false; return; }
+    const fig = e.target.closest('.g-slide');
+    if (!fig) return;
+    const s = slides[+fig.dataset.i];
+    $('#lbBody').innerHTML = s.html;
+    $('#lbCap').textContent = s.cap;
+    lb.classList.add('open');
+    document.documentElement.style.overflow = 'hidden';
+    $('#lbClose').focus();
+  });
+  function closeLb() { lb.classList.remove('open'); document.documentElement.style.overflow = ''; }
+  $('#lbClose').addEventListener('click', closeLb);
+  lb.addEventListener('click', (e) => { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lb.classList.contains('open')) closeLb(); });
+
+  /* ---------- 相关推荐（§5.2：同分类 ＋ 共享标签 ≥ 2） ---------- */
+  const shared = (a, b) => a.tags.filter(t => b.tags.includes(t)).length;
+  const rel = D.POSES
+    .filter(x => x.id !== p.id)
+    .map(x => ({ x, score: (x.cat === p.cat ? 10 : 0) + shared(x, p) }))
+    .filter(o => o.score >= 2)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 6)
+    .map(o => o.x);
+  $('#relRow').innerHTML = rel.map(x => `
+    <a class="rel-card" href="detail.html?id=${x.id}" data-nav aria-label="相关姿势：${x.name}">
+      <div class="rel-cover">${D.poseSVG(x, 'cover')}</div>
+      <div class="rel-info"><span class="rel-name">${x.name}</span><span style="display:inline-flex;padding-top:3px">${PG.dots(x.diff)}</span></div>
+    </a>`).join('');
+
+  go(0, false);
+})();
+</script>
+</body>
+</html>

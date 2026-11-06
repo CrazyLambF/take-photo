@@ -1,0 +1,147 @@
+{
+ "meta": {
+  "generated": "2026-11-02"
+ },
+ "categories": [
+  {
+   "category": "ST",
+   "name": "站姿 · 日常",
+   "tips": [
+    {
+     "type": "composition",
+     "text": "竖构图，镜头与腰同高"
+    },
+    {
+     "type": "light",
+     "text": "核心是\"重心＋线条\"——重心放一条腿、收腹开肩、手不要贴死身体；机位多为竖构图全身，镜头与腰同高。"
+    }
+   ]
+  },
+  {
+   "category": "SIT",
+   "name": "坐姿",
+   "tips": [
+    {
+     "type": "composition",
+     "text": "平视或低机位，注意腿部线条"
+    },
+    {
+     "type": "light",
+     "text": "坐椅面前 1/3、腰背挺直、双腿并拢或交叠绷脚尖；手一定要\"有事做\"（托杯/撑地/抱膝）。"
+    }
+   ]
+  },
+  {
+   "category": "STREET",
+   "name": "街拍 · 行走互动",
+   "tips": [
+    {
+     "type": "composition",
+     "text": "连拍、低机位、竖构图"
+    },
+    {
+     "type": "light",
+     "text": "动态大于静态，用连拍＋\"不看镜头\"制造\"被拍到的自然感\"；低机位＋竖构图是街拍万能公式。"
+    }
+   ]
+  },
+  {
+   "category": "TRAVEL",
+   "name": "旅行 · 地标打卡",
+   "tips": [
+    {
+     "type": "composition",
+     "text": "广角借位、人小景大"
+    },
+    {
+     "type": "light",
+     "text": "\"人小景大\"或\"借位互动\"两种思路；避开正午顶光；部分地标禁止商用拍摄，素材采集前先确认（见 §4.3）。"
+    }
+   ]
+  },
+  {
+   "category": "HOME",
+   "name": "室内 · 居家",
+   "tips": [
+    {
+     "type": "composition",
+     "text": "侧光/逆光，大光圈"
+    },
+    {
+     "type": "light",
+     "text": "窗光是主角，侧光/逆光优于顶灯；收拾背景杂物，画面做减法。"
+    }
+   ]
+  },
+  {
+   "category": "CAFE",
+   "name": "咖啡店 · 餐桌",
+   "tips": [
+    {
+     "type": "composition",
+     "text": "平视半身＋桌面垂直俯拍"
+    },
+    {
+     "type": "light",
+     "text": "靠窗位光线最佳；\"手上有事做\"就不尴尬；桌面物品成组摆放（3 件以内）。"
+    }
+   ]
+  },
+  {
+   "category": "BACK",
+   "name": "背影 · 剪影",
+   "tips": [
+    {
+     "type": "composition",
+     "text": "平视/低机位，剪影点测光"
+    },
+    {
+     "type": "light",
+     "text": "背影要\"有戏\"——手、脚、头必须有内容；服装颜色与背景的对比是成败关键。"
+    }
+   ]
+  },
+  {
+   "category": "CLOSE",
+   "name": "特写 · 局部",
+   "tips": [
+    {
+     "type": "composition",
+     "text": "等效 85mm 或人像模式"
+    },
+    {
+     "type": "light",
+     "text": "特写的本质是放大局部优势、藏起短板；光比要小，重点在眼神光与手型。"
+    }
+   ]
+  },
+  {
+   "category": "PROP",
+   "name": "道具 · 互动",
+   "tips": [
+    {
+     "type": "composition",
+     "text": "道具作视觉锚点"
+    },
+    {
+     "type": "light",
+     "text": "道具的作用是\"给手找事＋暗示场景\"；道具颜色与服装呼应，一图一件主道具。"
+    }
+   ]
+  },
+  {
+   "category": "SCENE",
+   "name": "场景 · 氛围",
+   "tips": [
+    {
+     "type": "composition",
+     "text": "场景即主角，人物点睛"
+    },
+    {
+     "type": "light",
+     "text": "场景即主角——环境有辨识度（夜景/雨天/雪地…），人物做点睛；姿势宜简，让光线与氛围干活。所有样例图为同一位主设定模特（参考图锁定）。"
+    }
+   ]
+  }
+ ]
+}

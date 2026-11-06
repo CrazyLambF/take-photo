@@ -1,0 +1,4432 @@
+{
+ "meta": {
+  "generated": "2026-11-02",
+  "copyStatus": "derived-v1",
+  "source": "计划 §2.2 详表 + pose-prompts-100.json v1.1 + manifest；文案打磨见决策 #15"
+ },
+ "poses": [
+  {
+   "id": "ST-01",
+   "name": "自然直立",
+   "category": "ST",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图全身，镜头与腰同高，头顶留白约 1/10",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双脚前后错开或丁字步，重心放后腿，双手自然下垂并微微离开身体",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双脚前后错开或丁字步，重心放后腿，双手自然下垂并微微离开身体",
+    "按机位取景（竖构图全身），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "重心不稳，身体歪斜",
+    "双臂贴死身体显壮",
+    "下巴上扬显鼻孔"
+   ],
+   "images": {
+    "cover": "poses/ST-01/cover.jpg",
+    "lineArt": "poses/ST-01/lineart.png"
+   },
+   "tags": [
+    "站姿",
+    "全身"
+   ]
+  },
+  {
+   "id": "ST-02",
+   "name": "45° 侧身回眸",
+   "category": "ST",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "黄金时刻",
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视半身，人物置三分线",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "身体侧转 45°，下巴微收，转头看镜头，一手轻拨头发",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：身体侧转 45°，下巴微收，转头看镜头，一手轻拨头发",
+    "按机位取景（平视半身），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "重心不稳，身体歪斜",
+    "双臂贴死身体显壮",
+    "下巴上扬显鼻孔"
+   ],
+   "images": {
+    "cover": "poses/ST-02/cover.jpg",
+    "lineArt": "poses/ST-02/lineart.png"
+   },
+   "tags": [
+    "站姿",
+    "回眸",
+    "半身"
+   ]
+  },
+  {
+   "id": "ST-03",
+   "name": "靠墙站",
+   "category": "ST",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "侧面平视中景，选干净墙面",
+    "settings": ""
+   },
+   "pose": {
+    "body": "肩或背轻靠墙，一腿屈膝脚掌点地，手可插袋",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：肩或背轻靠墙，一腿屈膝脚掌点地，手可插袋",
+    "按机位取景（侧面平视中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "重心不稳，身体歪斜",
+    "双臂贴死身体显壮",
+    "下巴上扬显鼻孔"
+   ],
+   "images": {
+    "cover": "poses/ST-03/cover.jpg",
+    "lineArt": "poses/ST-03/lineart.png"
+   },
+   "tags": [
+    "站姿",
+    "站"
+   ]
+  },
+  {
+   "id": "ST-04",
+   "name": "双手插袋",
+   "category": "ST",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "中景平视",
+    "settings": ""
+   },
+   "pose": {
+    "body": "拇指露在外其余入袋，肩膀放松下沉",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：拇指露在外其余入袋，肩膀放松下沉",
+    "按机位取景（中景平视），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "重心不稳，身体歪斜",
+    "双臂贴死身体显壮",
+    "下巴上扬显鼻孔"
+   ],
+   "images": {
+    "cover": "poses/ST-04/cover.jpg",
+    "lineArt": "poses/ST-04/lineart.png"
+   },
+   "tags": [
+    "站姿"
+   ]
+  },
+  {
+   "id": "ST-05",
+   "name": "松弛环抱",
+   "category": "ST",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "仰拍",
+    "framing": "中景，稍仰拍增强气场",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双臂交叉但只抱一只手或手藏袖口，避免紧绷",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双臂交叉但只抱一只手或手藏袖口，避免紧绷",
+    "按机位取景（中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "重心不稳，身体歪斜",
+    "双臂贴死身体显壮",
+    "下巴上扬显鼻孔"
+   ],
+   "images": {
+    "cover": "poses/ST-05/cover.jpg",
+    "lineArt": "poses/ST-05/lineart.png"
+   },
+   "tags": [
+    "站姿"
+   ]
+  },
+  {
+   "id": "ST-06",
+   "name": "拨发动态",
+   "category": "ST",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "逆光",
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "平视半身，动感抓拍",
+    "settings": "连拍，快门 ≥ 1/250s"
+   },
+   "pose": {
+    "body": "一手撩发，借风或甩动抓拍瞬间",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：一手撩发，借风或甩动抓拍瞬间",
+    "按机位取景（平视半身），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "重心不稳，身体歪斜",
+    "双臂贴死身体显壮",
+    "下巴上扬显鼻孔"
+   ],
+   "images": {
+    "cover": "poses/ST-06/cover.jpg",
+    "lineArt": "poses/ST-06/lineart.png"
+   },
+   "tags": [
+    "站姿",
+    "逆光",
+    "半身"
+   ]
+  },
+  {
+   "id": "ST-07",
+   "name": "提裙旋转",
+   "category": "ST",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "稍低机位，抓裙摆展开帧",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "双手提裙摆两侧向外，小幅度旋转",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双手提裙摆两侧向外，小幅度旋转",
+    "按机位取景（稍低机位），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "重心不稳，身体歪斜",
+    "双臂贴死身体显壮",
+    "下巴上扬显鼻孔"
+   ],
+   "images": {
+    "cover": "poses/ST-07/cover.jpg",
+    "lineArt": "poses/ST-07/lineart.png"
+   },
+   "tags": [
+    "站姿"
+   ]
+  },
+  {
+   "id": "ST-08",
+   "name": "俏皮后勾腿",
+   "category": "ST",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "全身平视，画面下方留白注意脚部完整",
+    "settings": ""
+   },
+   "pose": {
+    "body": "重心放前腿，后腿小腿向后勾起，配俏皮表情",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：重心放前腿，后腿小腿向后勾起，配俏皮表情",
+    "按机位取景（全身平视），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "重心不稳，身体歪斜",
+    "双臂贴死身体显壮",
+    "下巴上扬显鼻孔"
+   ],
+   "images": {
+    "cover": "poses/ST-08/cover.jpg",
+    "lineArt": "poses/ST-08/lineart.png"
+   },
+   "tags": [
+    "站姿",
+    "全身"
+   ],
+   "props": [
+    "画册"
+   ]
+  },
+  {
+   "id": "ST-09",
+   "name": "踮脚伸展",
+   "category": "ST",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "侧面构图，表现身体舒展线条",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双臂上举伸懒腰，或单手搭眉骨做远眺",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双臂上举伸懒腰，或单手搭眉骨做远眺",
+    "按机位取景（侧面构图），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "重心不稳，身体歪斜",
+    "双臂贴死身体显壮",
+    "下巴上扬显鼻孔"
+   ],
+   "images": {
+    "cover": "poses/ST-09/cover.jpg",
+    "lineArt": "poses/ST-09/lineart.png"
+   },
+   "tags": [
+    "站姿"
+   ]
+  },
+  {
+   "id": "ST-10",
+   "name": "逆光剪影",
+   "category": "ST",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "逆光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "逆光对焦亮部 -1EV，人物占画面下 1/3",
+    "settings": ""
+   },
+   "pose": {
+    "body": "肢体夸张舒展（叉腰/伸手/踢腿），不看镜头",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：肢体夸张舒展（叉腰/伸手/踢腿），不看镜头",
+    "按机位取景（逆光对焦亮部 -1EV），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "重心不稳，身体歪斜",
+    "双臂贴死身体显壮",
+    "下巴上扬显鼻孔"
+   ],
+   "images": {
+    "cover": "poses/ST-10/cover.jpg",
+    "lineArt": "poses/ST-10/lineart.png"
+   },
+   "tags": [
+    "站姿",
+    "逆光"
+   ],
+   "props": [
+    "画册"
+   ]
+  },
+  {
+   "id": "SIT-01",
+   "name": "前倾标准坐",
+   "category": "SIT",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视半身，背景虚化",
+    "settings": ""
+   },
+   "pose": {
+    "body": "坐椅面前 1/3，腰背挺直，双手捧杯或交叠放桌面",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：坐椅面前 1/3，腰背挺直，双手捧杯或交叠放桌面",
+    "按机位取景（平视半身），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "坐满整张椅子显得松垮",
+    "膝盖正对镜头挤压腿部线条",
+    "驼背含胸"
+   ],
+   "images": {
+    "cover": "poses/SIT-01/cover.jpg",
+    "lineArt": "poses/SIT-01/lineart.png"
+   },
+   "tags": [
+    "坐姿",
+    "坐",
+    "半身"
+   ]
+  },
+  {
+   "id": "SIT-02",
+   "name": "侧坐叠腿",
+   "category": "SIT",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "侧面全景，表现腿部曲线",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双腿并拢侧放，小腿向后叠，脚尖绷直",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双腿并拢侧放，小腿向后叠，脚尖绷直",
+    "按机位取景（侧面全景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "坐满整张椅子显得松垮",
+    "膝盖正对镜头挤压腿部线条",
+    "驼背含胸"
+   ],
+   "images": {
+    "cover": "poses/SIT-02/cover.jpg",
+    "lineArt": "poses/SIT-02/lineart.png"
+   },
+   "tags": [
+    "坐姿",
+    "坐"
+   ]
+  },
+  {
+   "id": "SIT-03",
+   "name": "台阶交叉坐",
+   "category": "SIT",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "低机位仰拍，台阶做引导线",
+    "settings": ""
+   },
+   "pose": {
+    "body": "一腿伸直一腿屈膝，同侧手撑台阶，头微倾",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：一腿伸直一腿屈膝，同侧手撑台阶，头微倾",
+    "按机位取景（低机位仰拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "坐满整张椅子显得松垮",
+    "膝盖正对镜头挤压腿部线条",
+    "驼背含胸"
+   ],
+   "images": {
+    "cover": "poses/SIT-03/cover.jpg",
+    "lineArt": "poses/SIT-03/lineart.png"
+   },
+   "tags": [
+    "坐姿",
+    "坐"
+   ]
+  },
+  {
+   "id": "SIT-04",
+   "name": "草地盘坐",
+   "category": "SIT",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视或略低，裙摆铺开成画面元素",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双膝并拢倒向一侧，手撑地或抱膝",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双膝并拢倒向一侧，手撑地或抱膝",
+    "按机位取景（平视或略低），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "坐满整张椅子显得松垮",
+    "膝盖正对镜头挤压腿部线条",
+    "驼背含胸"
+   ],
+   "images": {
+    "cover": "poses/SIT-04/cover.jpg",
+    "lineArt": "poses/SIT-04/lineart.png"
+   },
+   "tags": [
+    "坐姿",
+    "坐"
+   ],
+   "props": [
+    "画册"
+   ]
+  },
+  {
+   "id": "SIT-05",
+   "name": "屈膝抱腿",
+   "category": "SIT",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视全身，膝盖朝向镜头更显腿长",
+    "settings": ""
+   },
+   "pose": {
+    "body": "坐高处台阶/床沿，双膝屈起，手臂环抱",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：坐高处台阶/床沿，双膝屈起，手臂环抱",
+    "按机位取景（平视全身），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "坐满整张椅子显得松垮",
+    "膝盖正对镜头挤压腿部线条",
+    "驼背含胸"
+   ],
+   "images": {
+    "cover": "poses/SIT-05/cover.jpg",
+    "lineArt": "poses/SIT-05/lineart.png"
+   },
+   "tags": [
+    "坐姿",
+    "坐",
+    "全身"
+   ]
+  },
+  {
+   "id": "SIT-06",
+   "name": "沙发慵懒瘫",
+   "category": "SIT",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "人造光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "中景平视，暖光氛围",
+    "settings": ""
+   },
+   "pose": {
+    "body": "半躺靠扶手，抱枕垫腰，一腿搭扶手",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：半躺靠扶手，抱枕垫腰，一腿搭扶手",
+    "按机位取景（中景平视），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "坐满整张椅子显得松垮",
+    "膝盖正对镜头挤压腿部线条",
+    "驼背含胸"
+   ],
+   "images": {
+    "cover": "poses/SIT-06/cover.jpg",
+    "lineArt": "poses/SIT-06/lineart.png"
+   },
+   "tags": [
+    "坐姿",
+    "躺"
+   ]
+  },
+  {
+   "id": "SIT-07",
+   "name": "后仰手撑",
+   "category": "SIT",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "低机位仰拍，背景取天空",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双手向后撑地，身体后仰展开腰线",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双手向后撑地，身体后仰展开腰线",
+    "按机位取景（低机位仰拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "坐满整张椅子显得松垮",
+    "膝盖正对镜头挤压腿部线条",
+    "驼背含胸"
+   ],
+   "images": {
+    "cover": "poses/SIT-07/cover.jpg"
+   },
+   "tags": [
+    "坐姿",
+    "花"
+   ],
+   "props": [
+    "花束"
+   ]
+  },
+  {
+   "id": "SIT-08",
+   "name": "日式跪坐",
+   "category": "SIT",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "低机位正面或 45°",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双膝跪地小腿贴地，双手交叠放腿上",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双膝跪地小腿贴地，双手交叠放腿上",
+    "按机位取景（低机位正面或 45°），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "坐满整张椅子显得松垮",
+    "膝盖正对镜头挤压腿部线条",
+    "驼背含胸"
+   ],
+   "images": {
+    "cover": "poses/SIT-08/cover.jpg",
+    "lineArt": "poses/SIT-08/lineart.png"
+   },
+   "tags": [
+    "坐姿",
+    "坐"
+   ]
+  },
+  {
+   "id": "SIT-09",
+   "name": "反坐椅背",
+   "category": "SIT",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视中景",
+    "settings": ""
+   },
+   "pose": {
+    "body": "跨坐椅上，双臂叠放椅背，下巴轻搁手背",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：跨坐椅上，双臂叠放椅背，下巴轻搁手背",
+    "按机位取景（平视中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "坐满整张椅子显得松垮",
+    "膝盖正对镜头挤压腿部线条",
+    "驼背含胸"
+   ],
+   "images": {
+    "cover": "poses/SIT-09/cover.jpg",
+    "lineArt": "poses/SIT-09/lineart.png"
+   },
+   "tags": [
+    "坐姿",
+    "坐"
+   ]
+  },
+  {
+   "id": "SIT-10",
+   "name": "车内托腮",
+   "category": "SIT",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "隔窗或车内拍，注意玻璃反光与对焦",
+    "settings": ""
+   },
+   "pose": {
+    "body": "坐副驾/后座，手托腮或侧脸轻贴窗看远处",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：坐副驾/后座，手托腮或侧脸轻贴窗看远处",
+    "按机位取景（隔窗或车内拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "坐满整张椅子显得松垮",
+    "膝盖正对镜头挤压腿部线条",
+    "驼背含胸"
+   ],
+   "images": {
+    "cover": "poses/SIT-10/cover.jpg",
+    "lineArt": "poses/SIT-10/lineart.png"
+   },
+   "tags": [
+    "坐姿",
+    "坐",
+    "窗"
+   ]
+  },
+  {
+   "id": "STREET-01",
+   "name": "行走抓拍",
+   "category": "STREET",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "后退跟拍或原地连拍，脚下留白要少",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "正常走路不看镜头，手可拿咖啡/手机",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：正常走路不看镜头，手可拿咖啡/手机",
+    "按机位取景（后退跟拍或原地连拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "刻意僵住等镜头，失去行进感（用连拍抓走动帧）",
+    "头发遮脸或表情紧绷"
+   ],
+   "images": {
+    "cover": "poses/STREET-01/cover.jpg",
+    "lineArt": "poses/STREET-01/lineart.png"
+   },
+   "tags": [
+    "街拍",
+    "走",
+    "咖啡"
+   ],
+   "props": [
+    "咖啡"
+   ]
+  },
+  {
+   "id": "STREET-02",
+   "name": "回眸瞬间",
+   "category": "STREET",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "低机位竖构图，连拍抓甩发帧",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "行走中突然回头，头发自然甩动",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：行走中突然回头，头发自然甩动",
+    "按机位取景（低机位竖构图），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "刻意僵住等镜头，失去行进感（用连拍抓走动帧）",
+    "头发遮脸或表情紧绷"
+   ],
+   "images": {
+    "cover": "poses/STREET-02/cover.jpg",
+    "lineArt": "poses/STREET-02/lineart.png"
+   },
+   "tags": [
+    "街拍",
+    "回眸",
+    "走"
+   ]
+  },
+  {
+   "id": "STREET-03",
+   "name": "斑马线穿过",
+   "category": "STREET",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "广角低机位，车道线做引导线",
+    "settings": ""
+   },
+   "pose": {
+    "body": "面对镜头自然横穿，步伐与人群错开",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：面对镜头自然横穿，步伐与人群错开",
+    "按机位取景（广角低机位），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "刻意僵住等镜头，失去行进感（用连拍抓走动帧）",
+    "头发遮脸或表情紧绷"
+   ],
+   "images": {
+    "cover": "poses/STREET-03/cover.jpg",
+    "lineArt": "poses/STREET-03/lineart.png"
+   },
+   "tags": [
+    "街拍"
+   ]
+  },
+  {
+   "id": "STREET-04",
+   "name": "路边倚靠",
+   "category": "STREET",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "中景，避开背景车牌与杂乱路人",
+    "settings": ""
+   },
+   "pose": {
+    "body": "靠栏杆/花坛/墙面，一腿伸直一腿屈膝点墙",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：靠栏杆/花坛/墙面，一腿伸直一腿屈膝点墙",
+    "按机位取景（中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "刻意僵住等镜头，失去行进感（用连拍抓走动帧）",
+    "头发遮脸或表情紧绷"
+   ],
+   "images": {
+    "cover": "poses/STREET-04/cover.jpg",
+    "lineArt": "poses/STREET-04/lineart.png"
+   },
+   "tags": [
+    "街拍",
+    "花"
+   ],
+   "props": [
+    "花束"
+   ]
+  },
+  {
+   "id": "STREET-05",
+   "name": "推门瞬间",
+   "category": "STREET",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "连拍，门框做框式前景",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "推店门/扶帽檐的动作抓拍",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：推店门/扶帽檐的动作抓拍",
+    "按机位取景（连拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "刻意僵住等镜头，失去行进感（用连拍抓走动帧）",
+    "头发遮脸或表情紧绷"
+   ],
+   "images": {
+    "cover": "poses/STREET-05/cover.jpg",
+    "lineArt": "poses/STREET-05/lineart.png"
+   },
+   "tags": [
+    "街拍"
+   ]
+  },
+  {
+   "id": "STREET-06",
+   "name": "橱窗前走过",
+   "category": "STREET",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "侧机位，玻璃反光可利用",
+    "settings": ""
+   },
+   "pose": {
+    "body": "举杯/提袋走过橱窗，看橱窗不看镜头",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：举杯/提袋走过橱窗，看橱窗不看镜头",
+    "按机位取景（侧机位），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "刻意僵住等镜头，失去行进感（用连拍抓走动帧）",
+    "头发遮脸或表情紧绷"
+   ],
+   "images": {
+    "cover": "poses/STREET-06/cover.jpg",
+    "lineArt": "poses/STREET-06/lineart.png"
+   },
+   "tags": [
+    "街拍",
+    "走",
+    "窗"
+   ]
+  },
+  {
+   "id": "STREET-07",
+   "name": "倚车摆拍",
+   "category": "STREET",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "低机位全身，车身线条与人对角线构图",
+    "settings": ""
+   },
+   "pose": {
+    "body": "倚自行车/摩托车，跨站车旁扶把",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：倚自行车/摩托车，跨站车旁扶把",
+    "按机位取景（低机位全身），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "刻意僵住等镜头，失去行进感（用连拍抓走动帧）",
+    "头发遮脸或表情紧绷"
+   ],
+   "images": {
+    "cover": "poses/STREET-07/cover.jpg",
+    "lineArt": "poses/STREET-07/lineart.png"
+   },
+   "tags": [
+    "街拍",
+    "站",
+    "全身"
+   ]
+  },
+  {
+   "id": "STREET-08",
+   "name": "雨天打伞",
+   "category": "STREET",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "低机位把地面倒影拍进画面，人＋倒影同框",
+    "settings": ""
+   },
+   "pose": {
+    "body": "伞略向后倾露脸，踩水花",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：伞略向后倾露脸，踩水花",
+    "按机位取景（低机位把地面倒影拍进画面），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "刻意僵住等镜头，失去行进感（用连拍抓走动帧）",
+    "头发遮脸或表情紧绷"
+   ],
+   "images": {
+    "cover": "poses/STREET-08/cover.jpg",
+    "lineArt": "poses/STREET-08/lineart.png"
+   },
+   "tags": [
+    "街拍",
+    "花",
+    "伞",
+    "雨"
+   ],
+   "props": [
+    "伞",
+    "画册",
+    "花束"
+   ]
+  },
+  {
+   "id": "STREET-09",
+   "name": "蹲姿互动",
+   "category": "STREET",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视或微俯，抓侧脸",
+    "settings": ""
+   },
+   "pose": {
+    "body": "蹲下系鞋带/逗猫/拍路边小花",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：蹲下系鞋带/逗猫/拍路边小花",
+    "按机位取景（平视或微俯），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "刻意僵住等镜头，失去行进感（用连拍抓走动帧）",
+    "头发遮脸或表情紧绷"
+   ],
+   "images": {
+    "cover": "poses/STREET-09/cover.jpg"
+   },
+   "tags": [
+    "街拍",
+    "花"
+   ],
+   "props": [
+    "宠物",
+    "花束"
+   ]
+  },
+  {
+   "id": "STREET-10",
+   "name": "霓虹夜景",
+   "category": "STREET",
+   "difficulty": 3,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "夜景",
+    "人造光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "大光圈虚化霓虹，人脸需补光",
+    "settings": ""
+   },
+   "pose": {
+    "body": "站灯牌下侧身望远处，或抬手挡光",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：站灯牌下侧身望远处，或抬手挡光",
+    "按机位取景（大光圈虚化霓虹），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "刻意僵住等镜头，失去行进感（用连拍抓走动帧）",
+    "头发遮脸或表情紧绷"
+   ],
+   "images": {
+    "cover": "poses/STREET-10/cover.jpg",
+    "lineArt": "poses/STREET-10/lineart.png"
+   },
+   "tags": [
+    "街拍",
+    "站",
+    "夜"
+   ]
+  },
+  {
+   "id": "TRAVEL-01",
+   "name": "错位借位",
+   "category": "TRAVEL",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "广角＋小光圈，保证远近同焦清晰",
+    "settings": ""
+   },
+   "pose": {
+    "body": "远近站位\"托塔/捏塔/捧日\"，反复调整间距",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：远近站位\"托塔/捏塔/捧日\"，反复调整间距",
+    "按机位取景（广角＋小光圈），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "人物太大挡住地标（人小景大更耐看）",
+    "逆光时脸部死黑没有补光"
+   ],
+   "images": {
+    "cover": "poses/TRAVEL-01/cover.jpg",
+    "lineArt": "poses/TRAVEL-01/lineart.png"
+   },
+   "tags": [
+    "旅行",
+    "站"
+   ]
+  },
+  {
+   "id": "TRAVEL-02",
+   "name": "人在景中",
+   "category": "TRAVEL",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图三分线，前景花草做层次",
+    "settings": ""
+   },
+   "pose": {
+    "body": "人物占比 < 1/10，面向地标眺望",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：人物占比 < 1/10，面向地标眺望",
+    "按机位取景（竖构图三分线），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "人物太大挡住地标（人小景大更耐看）",
+    "逆光时脸部死黑没有补光"
+   ],
+   "images": {
+    "cover": "poses/TRAVEL-02/cover.jpg",
+    "lineArt": "poses/TRAVEL-02/lineart.png"
+   },
+   "tags": [
+    "旅行",
+    "花"
+   ],
+   "props": [
+    "花束"
+   ]
+  },
+  {
+   "id": "TRAVEL-03",
+   "name": "背影地标同框",
+   "category": "TRAVEL",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视，地标置于人物正上方居中",
+    "settings": ""
+   },
+   "pose": {
+    "body": "背对镜头张开双臂，或提帽在胸前",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：背对镜头张开双臂，或提帽在胸前",
+    "按机位取景（平视），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "人物太大挡住地标（人小景大更耐看）",
+    "逆光时脸部死黑没有补光"
+   ],
+   "images": {
+    "cover": "poses/TRAVEL-03/cover.jpg",
+    "lineArt": "poses/TRAVEL-03/lineart.png"
+   },
+   "tags": [
+    "旅行",
+    "背影"
+   ]
+  },
+  {
+   "id": "TRAVEL-04",
+   "name": "海边跳跃",
+   "category": "TRAVEL",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "黄金时刻"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "超低机位仰拍＋连拍，取腾空最高帧",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "双臂上扬双腿后踢，喊口令齐跳",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双臂上扬双腿后踢，喊口令齐跳",
+    "按机位取景（超低机位仰拍＋连拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "人物太大挡住地标（人小景大更耐看）",
+    "逆光时脸部死黑没有补光"
+   ],
+   "images": {
+    "cover": "poses/TRAVEL-04/cover.jpg",
+    "lineArt": "poses/TRAVEL-04/lineart.png"
+   },
+   "tags": [
+    "旅行",
+    "海"
+   ]
+  },
+  {
+   "id": "TRAVEL-05",
+   "name": "沙滩望海",
+   "category": "TRAVEL",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "侧面平视，海平线避开头顶",
+    "settings": ""
+   },
+   "pose": {
+    "body": "侧坐沙滩手撑地，或盘坐看海",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：侧坐沙滩手撑地，或盘坐看海",
+    "按机位取景（侧面平视），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "人物太大挡住地标（人小景大更耐看）",
+    "逆光时脸部死黑没有补光"
+   ],
+   "images": {
+    "cover": "poses/TRAVEL-05/cover.jpg",
+    "lineArt": "poses/TRAVEL-05/lineart.png"
+   },
+   "tags": [
+    "旅行",
+    "坐",
+    "海"
+   ]
+  },
+  {
+   "id": "TRAVEL-06",
+   "name": "公路延伸线",
+   "category": "TRAVEL",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "低机位居中对称，路面延伸线引导视线",
+    "settings": ""
+   },
+   "pose": {
+    "body": "站道路中线或路肩（安全前提），背对镜头",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：站道路中线或路肩（安全前提），背对镜头",
+    "按机位取景（低机位居中对称），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "人物太大挡住地标（人小景大更耐看）",
+    "逆光时脸部死黑没有补光"
+   ],
+   "images": {
+    "cover": "poses/TRAVEL-06/cover.jpg",
+    "lineArt": "poses/TRAVEL-06/lineart.png"
+   },
+   "tags": [
+    "旅行",
+    "站"
+   ]
+  },
+  {
+   "id": "TRAVEL-07",
+   "name": "道具挡脸",
+   "category": "TRAVEL",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "中近景，道具与眼神方向呼应",
+    "settings": ""
+   },
+   "pose": {
+    "body": "举地图/船票/冰淇淋遮下半脸",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：举地图/船票/冰淇淋遮下半脸",
+    "按机位取景（中近景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "人物太大挡住地标（人小景大更耐看）",
+    "逆光时脸部死黑没有补光"
+   ],
+   "images": {
+    "cover": "poses/TRAVEL-07/cover.jpg",
+    "lineArt": "poses/TRAVEL-07/lineart.png"
+   },
+   "tags": [
+    "旅行"
+   ]
+  },
+  {
+   "id": "TRAVEL-08",
+   "name": "阳台清晨",
+   "category": "TRAVEL",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "黄金时刻"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "侧逆光，纱帘做柔光前景",
+    "settings": ""
+   },
+   "pose": {
+    "body": "靠栏杆伸懒腰/端咖啡看远景",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：靠栏杆伸懒腰/端咖啡看远景",
+    "按机位取景（侧逆光），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "人物太大挡住地标（人小景大更耐看）",
+    "逆光时脸部死黑没有补光"
+   ],
+   "images": {
+    "cover": "poses/TRAVEL-08/cover.jpg",
+    "lineArt": "poses/TRAVEL-08/lineart.png"
+   },
+   "tags": [
+    "旅行",
+    "咖啡",
+    "逆光"
+   ],
+   "props": [
+    "咖啡"
+   ]
+  },
+  {
+   "id": "TRAVEL-09",
+   "name": "车窗观景",
+   "category": "TRAVEL",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "隔窗拍摄，镜头贴玻璃防反光，关闪光",
+    "settings": ""
+   },
+   "pose": {
+    "body": "手托腮侧脸贴窗，望向窗外",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：手托腮侧脸贴窗，望向窗外",
+    "按机位取景（隔窗拍摄），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "人物太大挡住地标（人小景大更耐看）",
+    "逆光时脸部死黑没有补光"
+   ],
+   "images": {
+    "cover": "poses/TRAVEL-09/cover.jpg",
+    "lineArt": "poses/TRAVEL-09/lineart.png"
+   },
+   "tags": [
+    "旅行",
+    "窗"
+   ]
+  },
+  {
+   "id": "TRAVEL-10",
+   "name": "假装拍摄",
+   "category": "TRAVEL",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "越肩或侧面中景，突出专注感",
+    "settings": ""
+   },
+   "pose": {
+    "body": "手持相机取景或翻看回放",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：手持相机取景或翻看回放",
+    "按机位取景（越肩或侧面中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "人物太大挡住地标（人小景大更耐看）",
+    "逆光时脸部死黑没有补光"
+   ],
+   "images": {
+    "cover": "poses/TRAVEL-10/cover.jpg",
+    "lineArt": "poses/TRAVEL-10/lineart.png"
+   },
+   "tags": [
+    "旅行"
+   ]
+  },
+  {
+   "id": "HOME-01",
+   "name": "窗边侧脸",
+   "category": "HOME",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "侧面 45°，窗光主光，暗部借白墙反光",
+    "settings": ""
+   },
+   "pose": {
+    "body": "站/坐窗前，脸转向光，眼看窗外",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：站/坐窗前，脸转向光，眼看窗外",
+    "按机位取景（侧面 45°），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "全靠顶灯照明，脸上有生硬阴影（改用窗光侧光）",
+    "背景杂物太多抢走焦点"
+   ],
+   "images": {
+    "cover": "poses/HOME-01/cover.jpg",
+    "lineArt": "poses/HOME-01/lineart.png"
+   },
+   "tags": [
+    "室内",
+    "坐",
+    "站",
+    "窗"
+   ]
+  },
+  {
+   "id": "HOME-02",
+   "name": "床上趴姿",
+   "category": "HOME",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "与床面同高平拍，被褥做前景",
+    "settings": ""
+   },
+   "pose": {
+    "body": "肘撑床托腮，小腿翘起交叠晃脚",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：肘撑床托腮，小腿翘起交叠晃脚",
+    "按机位取景（与床面同高平拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "全靠顶灯照明，脸上有生硬阴影（改用窗光侧光）",
+    "背景杂物太多抢走焦点"
+   ],
+   "images": {
+    "cover": "poses/HOME-02/cover.jpg",
+    "lineArt": "poses/HOME-02/lineart.png"
+   },
+   "tags": [
+    "室内"
+   ]
+  },
+  {
+   "id": "HOME-03",
+   "name": "俯拍躺姿",
+   "category": "HOME",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "俯拍",
+    "framing": "站床边垂直俯拍 45°，头朝画面下方",
+    "settings": ""
+   },
+   "pose": {
+    "body": "仰躺散开头发呈扇形，手放胸前或比心",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：仰躺散开头发呈扇形，手放胸前或比心",
+    "按机位取景（站床边垂直俯拍 45°），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "全靠顶灯照明，脸上有生硬阴影（改用窗光侧光）",
+    "背景杂物太多抢走焦点"
+   ],
+   "images": {
+    "cover": "poses/HOME-03/cover.jpg",
+    "lineArt": "poses/HOME-03/lineart.png"
+   },
+   "tags": [
+    "室内",
+    "站",
+    "躺"
+   ],
+   "props": [
+    "画册"
+   ]
+  },
+  {
+   "id": "HOME-04",
+   "name": "厨房回头",
+   "category": "HOME",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "连拍抓回头帧，侧逆光",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "洗菜/搅拌时被\"喊名字\"回头笑",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：洗菜/搅拌时被\"喊名字\"回头笑",
+    "按机位取景（连拍抓回头帧），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "全靠顶灯照明，脸上有生硬阴影（改用窗光侧光）",
+    "背景杂物太多抢走焦点"
+   ],
+   "images": {
+    "cover": "poses/HOME-04/cover.jpg",
+    "lineArt": "poses/HOME-04/lineart.png"
+   },
+   "tags": [
+    "室内",
+    "逆光"
+   ]
+  },
+  {
+   "id": "HOME-05",
+   "name": "对镜自拍",
+   "category": "HOME",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "镜面反射构图",
+    "settings": ""
+   },
+   "pose": {
+    "body": "全身镜前侧身站，手机挡脸或露半脸",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：全身镜前侧身站，手机挡脸或露半脸",
+    "按机位取景（镜面反射构图），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "全靠顶灯照明，脸上有生硬阴影（改用窗光侧光）",
+    "背景杂物太多抢走焦点"
+   ],
+   "images": {
+    "cover": "poses/HOME-05/cover.jpg",
+    "lineArt": "poses/HOME-05/lineart.png"
+   },
+   "tags": [
+    "室内",
+    "站",
+    "全身"
+   ]
+  },
+  {
+   "id": "HOME-06",
+   "name": "窗帘氛围",
+   "category": "HOME",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "逆光，纱帘柔化光线，适当欠曝留氛围",
+    "settings": ""
+   },
+   "pose": {
+    "body": "站纱帘后手拨帘，半遮脸",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：站纱帘后手拨帘，半遮脸",
+    "按机位取景（逆光），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "全靠顶灯照明，脸上有生硬阴影（改用窗光侧光）",
+    "背景杂物太多抢走焦点"
+   ],
+   "images": {
+    "cover": "poses/HOME-06/cover.jpg",
+    "lineArt": "poses/HOME-06/lineart.png"
+   },
+   "tags": [
+    "室内",
+    "站",
+    "窗",
+    "逆光"
+   ]
+  },
+  {
+   "id": "HOME-07",
+   "name": "地毯躺拍",
+   "category": "HOME",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "俯拍",
+    "framing": "摄影师站立垂直正俯拍，注意广角畸变",
+    "settings": ""
+   },
+   "pose": {
+    "body": "侧躺手撑头，或双手比心举过头顶",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：侧躺手撑头，或双手比心举过头顶",
+    "按机位取景（摄影师站立垂直正俯拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "全靠顶灯照明，脸上有生硬阴影（改用窗光侧光）",
+    "背景杂物太多抢走焦点"
+   ],
+   "images": {
+    "cover": "poses/HOME-07/cover.jpg",
+    "lineArt": "poses/HOME-07/lineart.png"
+   },
+   "tags": [
+    "室内",
+    "站",
+    "躺"
+   ]
+  },
+  {
+   "id": "HOME-08",
+   "name": "沙发阅读",
+   "category": "HOME",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "人造光",
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "侧光中景，落地灯做画面点缀",
+    "settings": ""
+   },
+   "pose": {
+    "body": "盘坐沙发捧书，或举书挡脸",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：盘坐沙发捧书，或举书挡脸",
+    "按机位取景（侧光中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "全靠顶灯照明，脸上有生硬阴影（改用窗光侧光）",
+    "背景杂物太多抢走焦点"
+   ],
+   "images": {
+    "cover": "poses/HOME-08/cover.jpg",
+    "lineArt": "poses/HOME-08/lineart.png"
+   },
+   "tags": [
+    "室内",
+    "坐",
+    "书"
+   ],
+   "props": [
+    "书本",
+    "画册"
+   ]
+  },
+  {
+   "id": "HOME-09",
+   "name": "阳台植感",
+   "category": "HOME",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "侧逆光，绿叶做前景虚化",
+    "settings": ""
+   },
+   "pose": {
+    "body": "浇花/擦叶/把脸凑近花",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：浇花/擦叶/把脸凑近花",
+    "按机位取景（侧逆光），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "全靠顶灯照明，脸上有生硬阴影（改用窗光侧光）",
+    "背景杂物太多抢走焦点"
+   ],
+   "images": {
+    "cover": "poses/HOME-09/cover.jpg",
+    "lineArt": "poses/HOME-09/lineart.png"
+   },
+   "tags": [
+    "室内",
+    "花",
+    "逆光"
+   ],
+   "props": [
+    "花束"
+   ]
+  },
+  {
+   "id": "HOME-10",
+   "name": "夜读暖光",
+   "category": "HOME",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "人造光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "只开台灯，白平衡偏暖，提高 ISO 注意噪点",
+    "settings": ""
+   },
+   "pose": {
+    "body": "台灯下手捧书，侧脸受光",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：台灯下手捧书，侧脸受光",
+    "按机位取景（只开台灯），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "全靠顶灯照明，脸上有生硬阴影（改用窗光侧光）",
+    "背景杂物太多抢走焦点"
+   ],
+   "images": {
+    "cover": "poses/HOME-10/cover.jpg",
+    "lineArt": "poses/HOME-10/lineart.png"
+   },
+   "tags": [
+    "室内",
+    "夜",
+    "书"
+   ],
+   "props": [
+    "书本"
+   ]
+  },
+  {
+   "id": "CAFE-01",
+   "name": "捧杯看镜头",
+   "category": "CAFE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视半身，背景人流虚化",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双手捧杯凑近下巴，浅笑",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双手捧杯凑近下巴，浅笑",
+    "按机位取景（平视半身），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手臂压在桌沿显肩宽",
+    "道具举太高挡住脸"
+   ],
+   "images": {
+    "cover": "poses/CAFE-01/cover.jpg",
+    "lineArt": "poses/CAFE-01/lineart.png"
+   },
+   "tags": [
+    "咖啡店",
+    "半身"
+   ]
+  },
+  {
+   "id": "CAFE-02",
+   "name": "举杯遮嘴",
+   "category": "CAFE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "连拍，杯沿与眼睛平齐",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "喝一口被抓拍，杯子挡住下半脸",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：喝一口被抓拍，杯子挡住下半脸",
+    "按机位取景（连拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手臂压在桌沿显肩宽",
+    "道具举太高挡住脸"
+   ],
+   "images": {
+    "cover": "poses/CAFE-02/cover.jpg",
+    "lineArt": "poses/CAFE-02/lineart.png"
+   },
+   "tags": [
+    "咖啡店"
+   ]
+  },
+  {
+   "id": "CAFE-03",
+   "name": "低头看单",
+   "category": "CAFE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "斜侧 45°，表现睫毛与侧脸",
+    "settings": ""
+   },
+   "pose": {
+    "body": "看菜单/手机，嘴角放松",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：看菜单/手机，嘴角放松",
+    "按机位取景（斜侧 45°），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手臂压在桌沿显肩宽",
+    "道具举太高挡住脸"
+   ],
+   "images": {
+    "cover": "poses/CAFE-03/cover.jpg",
+    "lineArt": "poses/CAFE-03/lineart.png"
+   },
+   "tags": [
+    "咖啡店"
+   ]
+  },
+  {
+   "id": "CAFE-04",
+   "name": "桌面 POV",
+   "category": "CAFE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "俯拍",
+    "framing": "垂直俯拍桌面，餐布/木纹做底色",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双手入镜捧杯/比心，食物摆在对面",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双手入镜捧杯/比心，食物摆在对面",
+    "按机位取景（垂直俯拍桌面），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手臂压在桌沿显肩宽",
+    "道具举太高挡住脸"
+   ],
+   "images": {
+    "cover": "poses/CAFE-04/cover.jpg",
+    "lineArt": "poses/CAFE-04/lineart.png"
+   },
+   "tags": [
+    "咖啡店"
+   ]
+  },
+  {
+   "id": "CAFE-05",
+   "name": "搅拌特写",
+   "category": "CAFE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "近景浅景深，突出手部曲线",
+    "settings": ""
+   },
+   "pose": {
+    "body": "手持长柄勺搅动，看杯不看镜头",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：手持长柄勺搅动，看杯不看镜头",
+    "按机位取景（近景浅景深），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手臂压在桌沿显肩宽",
+    "道具举太高挡住脸"
+   ],
+   "images": {
+    "cover": "poses/CAFE-05/cover.jpg",
+    "lineArt": "poses/CAFE-05/lineart.png"
+   },
+   "tags": [
+    "咖啡店",
+    "特写"
+   ]
+  },
+  {
+   "id": "CAFE-06",
+   "name": "靠窗剪影",
+   "category": "CAFE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "逆光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "逆光剪影或轮廓光，-1EV",
+    "settings": ""
+   },
+   "pose": {
+    "body": "侧对窗坐，背对光闭眼或露出侧脸",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：侧对窗坐，背对光闭眼或露出侧脸",
+    "按机位取景（逆光剪影或轮廓光），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手臂压在桌沿显肩宽",
+    "道具举太高挡住脸"
+   ],
+   "images": {
+    "cover": "poses/CAFE-06/cover.jpg",
+    "lineArt": "poses/CAFE-06/lineart.png"
+   },
+   "tags": [
+    "咖啡店",
+    "坐",
+    "窗",
+    "逆光"
+   ]
+  },
+  {
+   "id": "CAFE-07",
+   "name": "切蛋糕抓拍",
+   "category": "CAFE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "连拍，桌面前景轻微虚化",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "叉子切蛋糕/送嘴边动作",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：叉子切蛋糕/送嘴边动作",
+    "按机位取景（连拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手臂压在桌沿显肩宽",
+    "道具举太高挡住脸"
+   ],
+   "images": {
+    "cover": "poses/CAFE-07/cover.jpg",
+    "lineArt": "poses/CAFE-07/lineart.png"
+   },
+   "tags": [
+    "咖啡店"
+   ]
+  },
+  {
+   "id": "CAFE-08",
+   "name": "举杯对碰",
+   "category": "CAFE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视，两只杯子都在画面内",
+    "settings": ""
+   },
+   "pose": {
+    "body": "与同伴隔桌举杯轻碰",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：与同伴隔桌举杯轻碰",
+    "按机位取景（平视），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手臂压在桌沿显肩宽",
+    "道具举太高挡住脸"
+   ],
+   "images": {
+    "cover": "poses/CAFE-08/cover.jpg",
+    "lineArt": "poses/CAFE-08/lineart.png"
+   },
+   "tags": [
+    "咖啡店"
+   ],
+   "props": [
+    "画册"
+   ]
+  },
+  {
+   "id": "CAFE-09",
+   "name": "阅读氛围",
+   "category": "CAFE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "中景，花瓶做前景虚化",
+    "settings": ""
+   },
+   "pose": {
+    "body": "捧书阅读，桌上留花瓶/咖啡",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：捧书阅读，桌上留花瓶/咖啡",
+    "按机位取景（中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手臂压在桌沿显肩宽",
+    "道具举太高挡住脸"
+   ],
+   "images": {
+    "cover": "poses/CAFE-09/cover.jpg",
+    "lineArt": "poses/CAFE-09/lineart.png"
+   },
+   "tags": [
+    "咖啡店",
+    "花",
+    "书",
+    "咖啡"
+   ],
+   "props": [
+    "书本",
+    "咖啡",
+    "花束"
+   ]
+  },
+  {
+   "id": "CAFE-10",
+   "name": "递物互动",
+   "category": "CAFE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "抓拍，手臂引导线指向人物",
+    "settings": ""
+   },
+   "pose": {
+    "body": "递手机/结账/接找零的瞬间",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：递手机/结账/接找零的瞬间",
+    "按机位取景（抓拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手臂压在桌沿显肩宽",
+    "道具举太高挡住脸"
+   ],
+   "images": {
+    "cover": "poses/CAFE-10/cover.jpg",
+    "lineArt": "poses/CAFE-10/lineart.png"
+   },
+   "tags": [
+    "咖啡店"
+   ]
+  },
+  {
+   "id": "BACK-01",
+   "name": "张开双臂",
+   "category": "BACK",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "黄金时刻"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图，人物占下 1/3，天空留白",
+    "settings": ""
+   },
+   "pose": {
+    "body": "面朝大海/山野/草地张开双臂",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：面朝大海/山野/草地张开双臂",
+    "按机位取景（竖构图），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "肩膀耸起不放松",
+    "头顶切边、地平线压头"
+   ],
+   "images": {
+    "cover": "poses/BACK-01/cover.jpg",
+    "lineArt": "poses/BACK-01/lineart.png"
+   },
+   "tags": [
+    "背影",
+    "海"
+   ]
+  },
+  {
+   "id": "BACK-02",
+   "name": "回眸 45°",
+   "category": "BACK",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "连拍，抓最自然的回眸帧",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "背身回头露侧脸，一手拨头发",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：背身回头露侧脸，一手拨头发",
+    "按机位取景（连拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "肩膀耸起不放松",
+    "头顶切边、地平线压头"
+   ],
+   "images": {
+    "cover": "poses/BACK-02/cover.jpg",
+    "lineArt": "poses/BACK-02/lineart.png"
+   },
+   "tags": [
+    "背影",
+    "回眸"
+   ]
+  },
+  {
+   "id": "BACK-03",
+   "name": "举手比心",
+   "category": "BACK",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视，手部轮廓要清晰分开",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双手举过头顶比心/比 V",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双手举过头顶比心/比 V",
+    "按机位取景（平视），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "肩膀耸起不放松",
+    "头顶切边、地平线压头"
+   ],
+   "images": {
+    "cover": "poses/BACK-03/cover.jpg",
+    "lineArt": "poses/BACK-03/lineart.png"
+   },
+   "tags": [
+    "背影"
+   ]
+  },
+  {
+   "id": "BACK-04",
+   "name": "撑伞背影",
+   "category": "BACK",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "雨天遮雨或晴天遮阳均可，低机位",
+    "settings": ""
+   },
+   "pose": {
+    "body": "伞微微后倾，露出肩颈线条",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：伞微微后倾，露出肩颈线条",
+    "按机位取景（雨天遮雨或晴天遮阳均可），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "肩膀耸起不放松",
+    "头顶切边、地平线压头"
+   ],
+   "images": {
+    "cover": "poses/BACK-04/cover.jpg",
+    "lineArt": "poses/BACK-04/lineart.png"
+   },
+   "tags": [
+    "背影",
+    "伞",
+    "雨"
+   ],
+   "props": [
+    "伞"
+   ]
+  },
+  {
+   "id": "BACK-05",
+   "name": "高处坐望",
+   "category": "BACK",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "⚠️ 安全第一；侧面平视，可做剪影处理",
+    "settings": ""
+   },
+   "pose": {
+    "body": "坐天台/堤岸边沿，双腿自然下垂",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：坐天台/堤岸边沿，双腿自然下垂",
+    "按机位取景（⚠️ 安全第一；侧面平视），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "肩膀耸起不放松",
+    "头顶切边、地平线压头"
+   ],
+   "images": {
+    "cover": "poses/BACK-05/cover.jpg",
+    "lineArt": "poses/BACK-05/lineart.png"
+   },
+   "tags": [
+    "背影",
+    "坐"
+   ]
+  },
+  {
+   "id": "BACK-06",
+   "name": "林荫道居中",
+   "category": "BACK",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "对称构图，树冠做天然相框",
+    "settings": ""
+   },
+   "pose": {
+    "body": "走在小路正中，步伐自然",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：走在小路正中，步伐自然",
+    "按机位取景（对称构图），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "肩膀耸起不放松",
+    "头顶切边、地平线压头"
+   ],
+   "images": {
+    "cover": "poses/BACK-06/cover.jpg"
+   },
+   "tags": [
+    "背影",
+    "走"
+   ]
+  },
+  {
+   "id": "BACK-07",
+   "name": "手提帽子",
+   "category": "BACK",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "抓摆臂瞬间，衣摆飞扬更佳",
+    "settings": ""
+   },
+   "pose": {
+    "body": "一手拎帽/拎鞋，一手自然摆动",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：一手拎帽/拎鞋，一手自然摆动",
+    "按机位取景（抓摆臂瞬间），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "肩膀耸起不放松",
+    "头顶切边、地平线压头"
+   ],
+   "images": {
+    "cover": "poses/BACK-07/cover.jpg",
+    "lineArt": "poses/BACK-07/lineart.png"
+   },
+   "tags": [
+    "背影"
+   ]
+  },
+  {
+   "id": "BACK-08",
+   "name": "落日剪影",
+   "category": "BACK",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "黄金时刻",
+    "逆光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "逆光对天空点测光，人物收成纯黑剪影",
+    "settings": ""
+   },
+   "pose": {
+    "body": "面朝落日站立，肢体舒展",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：面朝落日站立，肢体舒展",
+    "按机位取景（逆光对天空点测光），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "肩膀耸起不放松",
+    "头顶切边、地平线压头"
+   ],
+   "images": {
+    "cover": "poses/BACK-08/cover.jpg",
+    "lineArt": "poses/BACK-08/lineart.png"
+   },
+   "tags": [
+    "背影",
+    "站",
+    "逆光"
+   ]
+  },
+  {
+   "id": "BACK-09",
+   "name": "低头看花",
+   "category": "BACK",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "俯拍",
+    "framing": "微俯拍，露出 1/4 侧脸更有层次",
+    "settings": ""
+   },
+   "pose": {
+    "body": "微侧身低头看花丛/水面",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：微侧身低头看花丛/水面",
+    "按机位取景（微俯拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "肩膀耸起不放松",
+    "头顶切边、地平线压头"
+   ],
+   "images": {
+    "cover": "poses/BACK-09/cover.jpg",
+    "lineArt": "poses/BACK-09/lineart.png"
+   },
+   "tags": [
+    "背影",
+    "花"
+   ],
+   "props": [
+    "花束"
+   ]
+  },
+  {
+   "id": "BACK-10",
+   "name": "踢腿跳跃",
+   "category": "BACK",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "连拍，低机位强化动感",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "单腿后踢或小跳，裙摆/外套扬起",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：单腿后踢或小跳，裙摆/外套扬起",
+    "按机位取景（连拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "肩膀耸起不放松",
+    "头顶切边、地平线压头"
+   ],
+   "images": {
+    "cover": "poses/BACK-10/cover.jpg",
+    "lineArt": "poses/BACK-10/lineart.png"
+   },
+   "tags": [
+    "背影"
+   ]
+  },
+  {
+   "id": "CLOSE-01",
+   "name": "侧脸特写",
+   "category": "CLOSE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "等效 85mm/2–3x 变焦",
+    "angle": "平视",
+    "framing": "等效 85mm，平视，对焦眼睛",
+    "settings": ""
+   },
+   "pose": {
+    "body": "面向光源的 2/3 侧脸，眼看斜上方",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：面向光源的 2/3 侧脸，眼看斜上方",
+    "按机位取景（等效 85mm），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手部姿态没检查，出现畸形",
+    "对焦落在背景，眼睛虚了"
+   ],
+   "images": {
+    "cover": "poses/CLOSE-01/cover.jpg"
+   },
+   "tags": [
+    "特写"
+   ]
+  },
+  {
+   "id": "CLOSE-02",
+   "name": "手托腮",
+   "category": "CLOSE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "平视近景，手背朝镜头更显脸小",
+    "settings": ""
+   },
+   "pose": {
+    "body": "指尖轻贴脸颊，手型放松如\"半握蛋\"",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：指尖轻贴脸颊，手型放松如\"半握蛋\"",
+    "按机位取景（平视近景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手部姿态没检查，出现畸形",
+    "对焦落在背景，眼睛虚了"
+   ],
+   "images": {
+    "cover": "poses/CLOSE-02/cover.jpg"
+   },
+   "tags": [
+    "特写"
+   ]
+  },
+  {
+   "id": "CLOSE-03",
+   "name": "睫毛垂眸",
+   "category": "CLOSE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "顶侧光勾出睫毛投影，人像/微距模式",
+    "settings": ""
+   },
+   "pose": {
+    "body": "低头垂眸或闭目，光从侧上方来",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：低头垂眸或闭目，光从侧上方来",
+    "按机位取景（顶侧光勾出睫毛投影），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手部姿态没检查，出现畸形",
+    "对焦落在背景，眼睛虚了"
+   ],
+   "images": {
+    "cover": "poses/CLOSE-03/cover.jpg"
+   },
+   "tags": [
+    "特写"
+   ]
+  },
+  {
+   "id": "CLOSE-04",
+   "name": "半脸遮挡",
+   "category": "CLOSE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "近景，露出的眼睛要有内容",
+    "settings": ""
+   },
+   "pose": {
+    "body": "杯沿/口罩/书角遮下半脸",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：杯沿/口罩/书角遮下半脸",
+    "按机位取景（近景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手部姿态没检查，出现畸形",
+    "对焦落在背景，眼睛虚了"
+   ],
+   "images": {
+    "cover": "poses/CLOSE-04/cover.jpg"
+   },
+   "tags": [
+    "特写",
+    "书"
+   ],
+   "props": [
+    "书本"
+   ]
+  },
+  {
+   "id": "CLOSE-05",
+   "name": "发丝飞扬",
+   "category": "CLOSE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "逆光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "连拍＋逆光发丝光，深色背景更出效果",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "甩头或借风吹发丝",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：甩头或借风吹发丝",
+    "按机位取景（连拍＋逆光发丝光），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手部姿态没检查，出现畸形",
+    "对焦落在背景，眼睛虚了"
+   ],
+   "images": {
+    "cover": "poses/CLOSE-05/cover.jpg"
+   },
+   "tags": [
+    "特写",
+    "逆光"
+   ]
+  },
+  {
+   "id": "CLOSE-06",
+   "name": "手部特写",
+   "category": "CLOSE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "俯拍",
+    "framing": "俯拍或侧拍，背景纯净，注意手部状态",
+    "settings": ""
+   },
+   "pose": {
+    "body": "拿花/戴戒指/双手交叠",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：拿花/戴戒指/双手交叠",
+    "按机位取景（俯拍或侧拍），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手部姿态没检查，出现畸形",
+    "对焦落在背景，眼睛虚了"
+   ],
+   "images": {
+    "cover": "poses/CLOSE-06/cover.jpg"
+   },
+   "tags": [
+    "特写",
+    "花"
+   ],
+   "props": [
+    "花束"
+   ]
+  },
+  {
+   "id": "CLOSE-07",
+   "name": "仰头沐光",
+   "category": "CLOSE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "逆光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "侧逆光，抓表情最松弛的一帧",
+    "settings": ""
+   },
+   "pose": {
+    "body": "闭眼仰头，脸朝光源方向",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：闭眼仰头，脸朝光源方向",
+    "按机位取景（侧逆光），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手部姿态没检查，出现畸形",
+    "对焦落在背景，眼睛虚了"
+   ],
+   "images": {
+    "cover": "poses/CLOSE-07/cover.jpg"
+   },
+   "tags": [
+    "特写",
+    "逆光"
+   ]
+  },
+  {
+   "id": "CLOSE-08",
+   "name": "越肩视角",
+   "category": "CLOSE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "大光圈，前后景拉开距离",
+    "settings": ""
+   },
+   "pose": {
+    "body": "借前景肩膀/头部做虚化框",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：借前景肩膀/头部做虚化框",
+    "按机位取景（大光圈），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手部姿态没检查，出现畸形",
+    "对焦落在背景，眼睛虚了"
+   ],
+   "images": {
+    "cover": "poses/CLOSE-08/cover.jpg"
+   },
+   "tags": [
+    "特写"
+   ]
+  },
+  {
+   "id": "CLOSE-09",
+   "name": "雾面朦胧",
+   "category": "CLOSE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "对焦人脸，雾气浓度手工控制",
+    "settings": ""
+   },
+   "pose": {
+    "body": "隔喷水雾的玻璃拍人脸",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：隔喷水雾的玻璃拍人脸",
+    "按机位取景（对焦人脸），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手部姿态没检查，出现畸形",
+    "对焦落在背景，眼睛虚了"
+   ],
+   "images": {
+    "cover": "poses/CLOSE-09/cover.jpg"
+   },
+   "tags": [
+    "特写"
+   ]
+  },
+  {
+   "id": "CLOSE-10",
+   "name": "镜面反射",
+   "category": "CLOSE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "对焦镜中像，注意镜面畸变",
+    "settings": ""
+   },
+   "pose": {
+    "body": "化妆镜/后视镜/橱窗反射构图",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：化妆镜/后视镜/橱窗反射构图",
+    "按机位取景（对焦镜中像），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "手部姿态没检查，出现畸形",
+    "对焦落在背景，眼睛虚了"
+   ],
+   "images": {
+    "cover": "poses/CLOSE-10/cover.jpg"
+   },
+   "tags": [
+    "特写",
+    "窗"
+   ]
+  },
+  {
+   "id": "PROP-01",
+   "name": "花束挡脸",
+   "category": "PROP",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "近景，花色与衣服同色系",
+    "settings": ""
+   },
+   "pose": {
+    "body": "举花挡下半脸，露眼笑",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：举花挡下半脸，露眼笑",
+    "按机位取景（近景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "道具喧宾夺主，眼神不看镜头",
+    "握持姿势僵硬，道具变成负担"
+   ],
+   "images": {
+    "cover": "poses/PROP-01/cover.jpg",
+    "lineArt": "poses/PROP-01/lineart.png"
+   },
+   "tags": [
+    "道具",
+    "花"
+   ],
+   "props": [
+    "花束"
+   ]
+  },
+  {
+   "id": "PROP-02",
+   "name": "牵引气球",
+   "category": "PROP",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "低机位，气球飘向画面留白处",
+    "settings": ""
+   },
+   "pose": {
+    "body": "手牵气球束举过头顶，微仰头看气球",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：手牵气球束举过头顶，微仰头看气球",
+    "按机位取景（低机位），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "道具喧宾夺主，眼神不看镜头",
+    "握持姿势僵硬，道具变成负担"
+   ],
+   "images": {
+    "cover": "poses/PROP-02/cover.jpg",
+    "lineArt": "poses/PROP-02/lineart.png"
+   },
+   "tags": [
+    "道具"
+   ],
+   "props": [
+    "气球",
+    "画册"
+   ]
+  },
+  {
+   "id": "PROP-03",
+   "name": "假装自拍",
+   "category": "PROP",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "越肩或镜面反射构图",
+    "settings": ""
+   },
+   "pose": {
+    "body": "举手机/相机对镜，看屏幕笑",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：举手机/相机对镜，看屏幕笑",
+    "按机位取景（越肩或镜面反射构图），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "道具喧宾夺主，眼神不看镜头",
+    "握持姿势僵硬，道具变成负担"
+   ],
+   "images": {
+    "cover": "poses/PROP-03/cover.jpg",
+    "lineArt": "poses/PROP-03/lineart.png"
+   },
+   "tags": [
+    "道具"
+   ]
+  },
+  {
+   "id": "PROP-04",
+   "name": "书本挡脸",
+   "category": "PROP",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "平视",
+    "framing": "近景平视，书页略弯更自然",
+    "settings": ""
+   },
+   "pose": {
+    "body": "翻开书遮半脸，露出眼睛",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：翻开书遮半脸，露出眼睛",
+    "按机位取景（近景平视），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "道具喧宾夺主，眼神不看镜头",
+    "握持姿势僵硬，道具变成负担"
+   ],
+   "images": {
+    "cover": "poses/PROP-04/cover.jpg",
+    "lineArt": "poses/PROP-04/lineart.png"
+   },
+   "tags": [
+    "道具",
+    "书"
+   ],
+   "props": [
+    "书本"
+   ]
+  },
+  {
+   "id": "PROP-05",
+   "name": "超市生活流",
+   "category": "PROP",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "货架通道纵深做背景",
+    "settings": ""
+   },
+   "pose": {
+    "body": "推购物篮/拎果袋，回头看镜头",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：推购物篮/拎果袋，回头看镜头",
+    "按机位取景（货架通道纵深做背景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "道具喧宾夺主，眼神不看镜头",
+    "握持姿势僵硬，道具变成负担"
+   ],
+   "images": {
+    "cover": "poses/PROP-05/cover.jpg",
+    "lineArt": "poses/PROP-05/lineart.png"
+   },
+   "tags": [
+    "道具"
+   ]
+  },
+  {
+   "id": "PROP-06",
+   "name": "宠物互动",
+   "category": "PROP",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "蹲下与宠物平视，用零食逗引视线",
+    "settings": "连拍，快门 ≥ 1/500s"
+   },
+   "pose": {
+    "body": "蹲下与宠物平视，用零食逗引视线",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：蹲下与宠物平视，用零食逗引视线",
+    "按机位取景（蹲下与宠物平视），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "道具喧宾夺主，眼神不看镜头",
+    "握持姿势僵硬，道具变成负担"
+   ],
+   "images": {
+    "cover": "poses/PROP-06/cover.jpg",
+    "lineArt": "poses/PROP-06/lineart.png"
+   },
+   "tags": [
+    "道具"
+   ]
+  },
+  {
+   "id": "PROP-07",
+   "name": "单车倚靠",
+   "category": "PROP",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "低机位",
+    "framing": "全身低机位，车身线条做引导",
+    "settings": ""
+   },
+   "pose": {
+    "body": "站车旁一手扶把，一腿跨过横梁",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：站车旁一手扶把，一腿跨过横梁",
+    "按机位取景（全身低机位），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "道具喧宾夺主，眼神不看镜头",
+    "握持姿势僵硬，道具变成负担"
+   ],
+   "images": {
+    "cover": "poses/PROP-07/cover.jpg",
+    "lineArt": "poses/PROP-07/lineart.png"
+   },
+   "tags": [
+    "道具",
+    "站",
+    "全身"
+   ],
+   "props": [
+    "自行车"
+   ]
+  },
+  {
+   "id": "PROP-08",
+   "name": "泡泡机",
+   "category": "PROP",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "逆光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "逆光让泡泡出彩虹光斑，连拍",
+    "settings": "连拍"
+   },
+   "pose": {
+    "body": "吹泡泡或伸手追拍泡泡",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：吹泡泡或伸手追拍泡泡",
+    "按机位取景（逆光让泡泡出彩虹光斑），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "道具喧宾夺主，眼神不看镜头",
+    "握持姿势僵硬，道具变成负担"
+   ],
+   "images": {
+    "cover": "poses/PROP-08/cover.jpg",
+    "lineArt": "poses/PROP-08/lineart.png"
+   },
+   "tags": [
+    "道具",
+    "逆光",
+    "光斑"
+   ],
+   "props": [
+    "泡泡机"
+   ]
+  },
+  {
+   "id": "PROP-09",
+   "name": "耳机氛围",
+   "category": "PROP",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "人造光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "侧光＋暗背景，突出轮廓光",
+    "settings": ""
+   },
+   "pose": {
+    "body": "戴耳机闭眼/低头，沉浸状态",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：戴耳机闭眼/低头，沉浸状态",
+    "按机位取景（侧光＋暗背景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "道具喧宾夺主，眼神不看镜头",
+    "握持姿势僵硬，道具变成负担"
+   ],
+   "images": {
+    "cover": "poses/PROP-09/cover.jpg",
+    "lineArt": "poses/PROP-09/lineart.png"
+   },
+   "tags": [
+    "道具"
+   ],
+   "props": [
+    "耳机"
+   ]
+  },
+  {
+   "id": "PROP-10",
+   "name": "街头美食",
+   "category": "PROP",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "近景，道具轻微倾斜更俏皮",
+    "settings": ""
+   },
+   "pose": {
+    "body": "举糖葫芦/冰淇淋挡脸或假装咬一口",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：举糖葫芦/冰淇淋挡脸或假装咬一口",
+    "按机位取景（近景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "道具喧宾夺主，眼神不看镜头",
+    "握持姿势僵硬，道具变成负担"
+   ],
+   "images": {
+    "cover": "poses/PROP-10/cover.jpg",
+    "lineArt": "poses/PROP-10/lineart.png"
+   },
+   "tags": [
+    "道具"
+   ]
+  },
+  {
+   "id": "SCENE-01",
+   "name": "夜色霓虹回眸",
+   "category": "SCENE",
+   "difficulty": 3,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "夜景",
+    "人造光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图中景，镜头与胸同高，人物居左三分线",
+    "settings": ""
+   },
+   "pose": {
+    "body": "路灯下回眸浅笑，霓虹虚化光斑",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：路灯下回眸浅笑，霓虹虚化光斑",
+    "按机位取景（竖构图中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "只顾场景忘了姿势基础（重心/线条）",
+    "夜景或逆光没补光，脸部欠曝"
+   ],
+   "images": {
+    "cover": "poses/SCENE-01/cover.jpg",
+    "lineArt": "poses/SCENE-01/lineart.png"
+   },
+   "tags": [
+    "场景",
+    "回眸",
+    "夜",
+    "光斑"
+   ]
+  },
+  {
+   "id": "SCENE-02",
+   "name": "美术馆侧读",
+   "category": "SCENE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "人造光",
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图中景，人物居右三分线，画作大面积留白",
+    "settings": ""
+   },
+   "pose": {
+    "body": "站画前侧身看画，一手轻抬",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：站画前侧身看画，一手轻抬",
+    "按机位取景（竖构图中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "只顾场景忘了姿势基础（重心/线条）",
+    "夜景或逆光没补光，脸部欠曝"
+   ],
+   "images": {
+    "cover": "poses/SCENE-02/cover.jpg",
+    "lineArt": "poses/SCENE-02/lineart.png"
+   },
+   "tags": [
+    "场景",
+    "站"
+   ],
+   "props": [
+    "画册"
+   ]
+  },
+  {
+   "id": "SCENE-03",
+   "name": "书架捧书",
+   "category": "SCENE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图中景，书架纵深引导线，人物居左三分线",
+    "settings": ""
+   },
+   "pose": {
+    "body": "书架间捧书侧头静读",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：书架间捧书侧头静读",
+    "按机位取景（竖构图中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "只顾场景忘了姿势基础（重心/线条）",
+    "夜景或逆光没补光，脸部欠曝"
+   ],
+   "images": {
+    "cover": "poses/SCENE-03/cover.jpg",
+    "lineArt": "poses/SCENE-03/lineart.png"
+   },
+   "tags": [
+    "场景",
+    "书"
+   ],
+   "props": [
+    "书本"
+   ]
+  },
+  {
+   "id": "SCENE-04",
+   "name": "花田拨发",
+   "category": "SCENE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "黄金时刻",
+    "逆光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图中近景，人物居右三分线，花田纵深延伸",
+    "settings": ""
+   },
+   "pose": {
+    "body": "黄昏花田闭眼拨发浅笑",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：黄昏花田闭眼拨发浅笑",
+    "按机位取景（竖构图中近景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "只顾场景忘了姿势基础（重心/线条）",
+    "夜景或逆光没补光，脸部欠曝"
+   ],
+   "images": {
+    "cover": "poses/SCENE-04/cover.jpg",
+    "lineArt": "poses/SCENE-04/lineart.png"
+   },
+   "tags": [
+    "场景",
+    "花"
+   ],
+   "props": [
+    "花束"
+   ]
+  },
+  {
+   "id": "SCENE-05",
+   "name": "海堤望海",
+   "category": "SCENE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图全景偏中景，人物居左三分线，右侧海面开阔",
+    "settings": ""
+   },
+   "pose": {
+    "body": "堤坝边抱膝坐，下巴靠膝望海平线",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：堤坝边抱膝坐，下巴靠膝望海平线",
+    "按机位取景（竖构图全景偏中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "只顾场景忘了姿势基础（重心/线条）",
+    "夜景或逆光没补光，脸部欠曝"
+   ],
+   "images": {
+    "cover": "poses/SCENE-05/cover.jpg",
+    "lineArt": "poses/SCENE-05/lineart.png"
+   },
+   "tags": [
+    "场景",
+    "坐",
+    "海"
+   ]
+  },
+  {
+   "id": "SCENE-06",
+   "name": "伞下听雨",
+   "category": "SCENE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图全身，人物居中央偏右，左侧雨中街景纵深",
+    "settings": ""
+   },
+   "pose": {
+    "body": "透明伞下低头看积水倒影",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：透明伞下低头看积水倒影",
+    "按机位取景（竖构图全身），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "只顾场景忘了姿势基础（重心/线条）",
+    "夜景或逆光没补光，脸部欠曝"
+   ],
+   "images": {
+    "cover": "poses/SCENE-06/cover.jpg",
+    "lineArt": "poses/SCENE-06/lineart.png"
+   },
+   "tags": [
+    "场景",
+    "伞",
+    "雨",
+    "全身"
+   ],
+   "props": [
+    "伞"
+   ]
+  },
+  {
+   "id": "SCENE-07",
+   "name": "站台候车",
+   "category": "SCENE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图中景，人物居左三分线，站台纵深延伸",
+    "settings": ""
+   },
+   "pose": {
+    "body": "屏蔽门前扶柱望来车方向",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：屏蔽门前扶柱望来车方向",
+    "按机位取景（竖构图中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "只顾场景忘了姿势基础（重心/线条）",
+    "夜景或逆光没补光，脸部欠曝"
+   ],
+   "images": {
+    "cover": "poses/SCENE-07/cover.jpg",
+    "lineArt": "poses/SCENE-07/lineart.png"
+   },
+   "tags": [
+    "场景",
+    "站"
+   ]
+  },
+  {
+   "id": "SCENE-08",
+   "name": "野餐侧躺",
+   "category": "SCENE",
+   "difficulty": 1,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图中景，人物居右三分线，前景野餐布虚化",
+    "settings": ""
+   },
+   "pose": {
+    "body": "格纹布上侧躺撑头看向镜头",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：格纹布上侧躺撑头看向镜头",
+    "按机位取景（竖构图中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "只顾场景忘了姿势基础（重心/线条）",
+    "夜景或逆光没补光，脸部欠曝"
+   ],
+   "images": {
+    "cover": "poses/SCENE-08/cover.jpg"
+   },
+   "tags": [
+    "场景",
+    "躺",
+    "野餐"
+   ]
+  },
+  {
+   "id": "SCENE-09",
+   "name": "雪地呵手",
+   "category": "SCENE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图中景，人物居左三分线，右侧雪地留白",
+    "settings": ""
+   },
+   "pose": {
+    "body": "双手拢嘴呵气取暖，眼弯带笑",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：双手拢嘴呵气取暖，眼弯带笑",
+    "按机位取景（竖构图中景），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "只顾场景忘了姿势基础（重心/线条）",
+    "夜景或逆光没补光，脸部欠曝"
+   ],
+   "images": {
+    "cover": "poses/SCENE-09/cover.jpg",
+    "lineArt": "poses/SCENE-09/lineart.png"
+   },
+   "tags": [
+    "场景",
+    "雪"
+   ]
+  },
+  {
+   "id": "SCENE-10",
+   "name": "机场回眸",
+   "category": "SCENE",
+   "difficulty": 2,
+   "people": 1,
+   "gear": [
+    "phone",
+    "camera"
+   ],
+   "light": [
+    "自然光"
+   ],
+   "camera": {
+    "focal": "",
+    "angle": "",
+    "framing": "竖构图全身，人物居左三分线，幕墙纵深留白",
+    "settings": ""
+   },
+   "pose": {
+    "body": "拉登机箱大步走忽然回眸浅笑",
+    "hands": "",
+    "head": "",
+    "expression": ""
+   },
+   "steps": [
+    "进入场景，先确认光线方向与干净背景",
+    "按要点摆位：拉登机箱大步走忽然回眸浅笑",
+    "按机位取景（竖构图全身），连拍 3–5 张微调选优"
+   ],
+   "mistakes": [
+    "只顾场景忘了姿势基础（重心/线条）",
+    "夜景或逆光没补光，脸部欠曝"
+   ],
+   "images": {
+    "cover": "poses/SCENE-10/cover.jpg",
+    "lineArt": "poses/SCENE-10/lineart.png"
+   },
+   "tags": [
+    "场景",
+    "回眸",
+    "走",
+    "机场",
+    "全身"
+   ]
+  }
+ ]
+}

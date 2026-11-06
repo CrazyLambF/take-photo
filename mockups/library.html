@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>摆拍手册 PoseGuide · 姿势库</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23B4552F'/%3E%3Ccircle cx='12' cy='12' r='4.5' fill='%23FAF7F1'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<script>
+  document.documentElement.classList.add('js');
+  try { var t = localStorage.getItem('pg-theme');
+    if (t) document.documentElement.dataset.theme = t;
+    else if (matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'dark';
+  } catch (e) {}
+</script>
+<style>
+/* ---------- 姿势库（§3.1 / §3.3：分类 chips ＋ 多维筛选 ＋ 响应式网格） ---------- */
+.lib-head { padding-top: var(--sp-6); }
+.lib-head h1 { font-size: var(--fs-28); letter-spacing: .02em; }
+.lib-head .lib-sub { font-size: var(--fs-13); color: var(--c-ink-3); margin-top: var(--sp-1); }
+@media (min-width: 1200px) { .lib-head h1 { font-size: var(--fs-34); } }
+
+/* 工具条：移动端吸附在顶栏下 */
+.lib-toolbar {
+  position: sticky; top: 56px; z-index: var(--z-chips);
+  display: flex; align-items: center; gap: var(--sp-2);
+  margin-top: var(--sp-5); padding-block: var(--sp-2);
+  background: color-mix(in srgb, var(--c-bg) 90%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.cat-chips { display: flex; gap: var(--sp-2); overflow-x: auto; scrollbar-width: none; flex: 1; padding-block: 2px; }
+.cat-chips::-webkit-scrollbar { display: none; }
+.filter-btn {
+  position: relative; display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;
+  min-height: 44px; padding-inline: var(--sp-4); border-radius: var(--r-full);
+  background: var(--c-surface); border: 1px solid var(--c-line-strong); font-size: var(--fs-14); font-weight: 500;
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.filter-btn:active { transform: scale(.95); }
+.filter-btn:hover { border-color: var(--c-ink-3); box-shadow: var(--shadow-1); }
+.f-badge { position: absolute; top: -6px; right: -6px; min-width: 19px; height: 19px; padding-inline: 5px;
+  border-radius: var(--r-full); background: var(--c-accent); color: var(--c-on-accent);
+  font-size: 11px; line-height: 19px; text-align: center; font-weight: 700; }
+@media (min-width: 768px) {
+  .lib-toolbar { top: var(--topnav-h); }
+  .filter-btn { min-height: 38px; font-size: var(--fs-13); }
+}
+
+/* 双栏（桌面）：左侧筛选栏常驻（§3.3） */
+.lib-layout { margin-top: var(--sp-2); }
+@media (min-width: 1200px) {
+  .lib-layout { display: grid; grid-template-columns: 236px minmax(0, 1fr); gap: var(--sp-8); align-items: start; }
+  .filter-rail {
+    position: sticky; top: calc(var(--topnav-h) + 16px);
+    max-height: calc(100dvh - var(--topnav-h) - 32px); overflow-y: auto;
+    border-right: 1px solid var(--c-line); border-radius: 0; box-shadow: none; padding-right: var(--sp-4);
+  }
+}
+
+/* 空态与底部 */
+.lib-foot { display: flex; flex-direction: column; align-items: center; gap: var(--sp-3); padding: var(--sp-8) 0 var(--sp-4); }
+.lib-count { font-size: var(--fs-12); color: var(--c-ink-3); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="topnav">
+  <div class="container topnav-in">
+    <a class="brand" href="index.html" data-nav><span class="brand-cn">摆拍手册</span><span class="brand-en">PoseGuide</span></a>
+    <nav class="topnav-links" aria-label="主导航">
+      <a href="home.html" data-nav>首页 · 发现</a>
+      <a href="library.html" data-nav aria-current="page">姿势库</a>
+      <a href="#" data-toast="「收藏与清单」页未包含在本轮 4 页原型中（见设计说明·待确认）">收藏与清单</a>
+      <a href="#" data-toast="「我的」页未包含在本轮 4 页原型中（见设计说明·待确认）">我的</a>
+    </nav>
+    <button class="topnav-search" data-toast="搜索页为 P0（计划 §3.1），本轮原型未包含" aria-label="搜索姿势、标签">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20.3 20.3-3.9-3.9"/></svg>
+      <span>搜索姿势 / 标签 / 拼音首字母</span>
+    </button>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深色模式"></button>
+  </div>
+</header>
+
+<header class="m-header">
+  <a class="brand" href="index.html" data-nav><span class="brand-cn">姿势库</span></a>
+  <span style="margin-left:auto"></span>
+  <button class="icon-btn" data-toast="搜索页为 P0（计划 §3.1），本轮原型未包含" aria-label="搜索"></button>
+  <button class="icon-btn" data-theme-toggle aria-label="切换深色模式"></button>
+</header>
+
+<main id="main" class="container lib">
+  <header class="lib-head" data-reveal>
+    <h1>姿势库</h1>
+    <p class="lib-sub">100 个机位与摆拍姿势 · 原型示例数据 24 / 100 条</p>
+  </header>
+
+  <!-- 分类 chips ＋ 筛选按钮 -->
+  <div class="lib-toolbar" data-reveal>
+    <div class="cat-chips" id="catChips" role="group" aria-label="按分类筛选（单选）"></div>
+    <button class="filter-btn" id="btnFilter" aria-expanded="false" aria-controls="filterPanel">
+      <span id="filterIcon"></span>筛选
+      <span class="f-badge" data-fbadge hidden>0</span>
+    </button>
+  </div>
+
+  <!-- 已选条件 chips（§5.3） -->
+  <div class="active-chips" id="activeChips" hidden></div>
+
+  <div class="lib-layout">
+    <!-- 筛选面板：移动/平板 = 底部抽屉；桌面 = 左侧常驻栏 -->
+    <aside class="filter-rail" id="filterPanel" aria-label="筛选面板">
+      <div class="grabber" aria-hidden="true"></div>
+      <div class="rail-body" id="railBody"></div>
+      <div class="rail-foot">
+        <button class="btn btn-ghost" id="btnReset">重置</button>
+        <button class="btn btn-primary" id="btnApply">查看 <b data-fcount>0</b> 个结果</button>
+      </div>
+    </aside>
+    <div class="backdrop" id="fBackdrop"></div>
+
+    <!-- 卡片网格 -->
+    <section aria-label="姿势结果">
+      <div class="grid" id="grid" aria-live="polite"></div>
+
+      <div class="empty" id="emptyState" hidden>
+        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.6l1.2-1.8h5.4L15.9 6h1.6A2.5 2.5 0 0 1 20 8.5v8A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5Z"/><circle cx="12" cy="12.5" r="3.4"/><path d="M3 3l18 18"/></svg>
+        <h3>没有符合条件的姿势</h3>
+        <p>试试放宽筛选条件，或切换其他分类</p>
+        <button class="btn btn-primary" id="btnLoosen">放宽条件</button>
+      </div>
+
+      <div class="lib-foot">
+        <p class="lib-count" id="libCount"></p>
+        <button class="btn btn-ghost" id="btnMore">加载更多</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<nav class="tabbar" aria-label="底部导航"></nav>
+
+<script src="assets/mock-data.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/preview.js"></script>
+<script>
+(function () {
+  const PG = window.PG, D = PG.data;
+  const $ = (s) => document.querySelector(s);
+  const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+  /* ---------- Tabbar / 图标 ---------- */
+  $('.m-header [data-toast]').innerHTML = PG.I('search', 20);
+  $('#filterIcon').innerHTML = PG.I('sliders', 17);
+  $('.tabbar').innerHTML = [
+    `<a href="home.html" data-nav>${PG.I('compass', 22)}首页</a>`,
+    `<a href="library.html" data-nav aria-current="page">${PG.I('grid', 22)}姿势库</a>`,
+    `<a href="#" data-toast="「收藏与清单」页未包含在本轮原型">${PG.I('heart', 22)}收藏<span class="tab-badge" data-fav-badge hidden></span></a>`,
+    `<a href="#" data-toast="「我的」页未包含在本轮原型">${PG.I('user', 22)}我的</a>`,
+  ].join('');
+
+  /* ---------- 筛选状态（§5.3：维度内 OR、维度间 AND；分类单选） ---------- */
+  const state = { cat: null, diff: new Set(), people: new Set(), gear: new Set(), light: new Set(), props: new Set() };
+  const GROUPS = [
+    { key: 'diff',   label: '难度', opts: [['1', '★ 入门'], ['2', '★★ 进阶'], ['3', '★★★ 挑战']] },
+    { key: 'people', label: '人数', opts: [['1', '单人'], ['2', '双人'], ['3', '多人']] },
+    { key: 'gear',   label: '器材', opts: [['phone', '手机'], ['camera', '相机']] },
+    { key: 'light',  label: '光线', opts: [['自然光', '自然光'], ['黄金时刻', '黄金时刻'], ['逆光', '逆光'], ['夜景', '夜景'], ['人造光', '人造光']] },
+    { key: 'props',  label: '道具', opts: [['无', '无'], ['花', '花'], ['气球', '气球'], ['咖啡', '咖啡'], ['宠物', '宠物'], ['伞', '伞'], ['书', '书']] },
+  ];
+  const PAGE = 10;
+  let visible = PAGE;
+
+  function matches(p) {
+    if (state.cat && p.cat !== state.cat) return false;
+    if (state.diff.size && !state.diff.has(String(p.diff))) return false;
+    if (state.people.size && !state.people.has(String(p.people))) return false;
+    if (state.gear.size && ![...state.gear].some(g => p.gear.includes(g))) return false;
+    if (state.light.size && ![...state.light].some(l => p.light.includes(l))) return false;
+    if (state.props.size) {
+      const ok = [...state.props].some(v => v === '无' ? p.props.length === 0 : p.props.includes(v));
+      if (!ok) return false;
+    }
+    return true;
+  }
+  function filtered() { return D.POSES.filter(matches); }
+  function activeCount() {
+    return (state.cat ? 1 : 0) + [...Object.keys(state)].filter(k => k !== 'cat' && state[k].size).length;
+  }
+
+  /* ---------- 渲染：分类 chips / 筛选组 / 已选 chips / 网格 ---------- */
+  function renderCatChips() {
+    const all = [{ id: null, short: '全部' }].concat(D.CATS);
+    $('#catChips').innerHTML = all.map(c => `
+      <button class="chip" data-cat="${c.id || ''}" aria-pressed="${state.cat === c.id}">${c.short}</button>`).join('');
+  }
+  function renderRail() {
+    const catGroup = `<div class="f-group"><h3>分类</h3><div class="f-opts">
+      <button class="chip" data-rcat="" aria-pressed="${!state.cat}">全部</button>
+      ${D.CATS.map(c => `<button class="chip" data-rcat="${c.id}" aria-pressed="${state.cat === c.id}">${c.short}</button>`).join('')}
+    </div></div>`;
+    $('#railBody').innerHTML = catGroup + GROUPS.map(g => `
+      <div class="f-group"><h3>${g.label}</h3><div class="f-opts">
+        ${g.opts.map(([v, t]) => `<button class="chip" data-k="${g.key}" data-v="${v}" aria-pressed="${state[g.key].has(v)}">${t}</button>`).join('')}
+      </div></div>`).join('');
+  }
+  function renderActiveChips() {
+    const box = $('#activeChips');
+    const chips = [];
+    if (state.cat) chips.push(`<span class="a-chip">${D.CAT_MAP[state.cat].short}<button data-del="cat" aria-label="移除分类条件">${PG.I('close', 13)}</button></span>`);
+    GROUPS.forEach(g => state[g.key].forEach(v => {
+      const label = (g.opts.find(o => o[0] === v) || [v, v])[1];
+      chips.push(`<span class="a-chip">${g.label} · ${label}<button data-del="${g.key}" data-val="${v}" aria-label="移除条件 ${label}">${PG.I('close', 13)}</button></span>`);
+    }));
+    if (!chips.length) { box.hidden = true; box.innerHTML = ''; return; }
+    box.hidden = false;
+    box.innerHTML = chips.join('') + `<button class="a-chip clear" data-clear-all>一键清空</button>`;
+  }
+  function updateCounts(n) {
+    $$('[data-fcount]').forEach(el => el.textContent = n);
+    const badge = $('[data-fbadge]');
+    const ac = activeCount();
+    badge.textContent = ac; badge.hidden = ac === 0;
+    $('#libCount').textContent = state.cat || ac
+      ? `共 ${n} 个姿势 · 筛选自 24 条示例数据`
+      : `共 ${n} 个姿势 · 原型示例数据 24 / 100 条`;
+  }
+  function renderGrid(animate) {
+    const list = filtered();
+    const shown = list.slice(0, visible);
+    const grid = $('#grid');
+    const empty = $('#emptyState');
+    empty.hidden = list.length !== 0;
+    $('#btnMore').hidden = list.length <= visible;
+    const paint = () => {
+      grid.innerHTML = shown.map(p => PG.poseCard(p)).join('');
+      PG.assignStagger(grid);
+      updateCounts(list.length);
+    };
+    if (animate && !PG.REDUCED) {
+      grid.innerHTML = PG.skeletonCards(Math.min(shown.length || 1, PAGE));
+      setTimeout(paint, 280);
+    } else paint();
+  }
+
+  /* ---------- 抽屉开合（移动/平板） ---------- */
+  const rail = $('#filterPanel'), backdrop = $('#fBackdrop'), btnFilter = $('#btnFilter');
+  const isDrawerMode = () => window.matchMedia('(max-width: 1199.98px)').matches;
+  let lastFocus = null;
+  function openDrawer() {
+    if (!isDrawerMode()) return;
+    lastFocus = document.activeElement;
+    rail.setAttribute('role', 'dialog');
+    rail.setAttribute('aria-modal', 'true');
+    rail.classList.add('open');
+    backdrop.classList.add('show');
+    btnFilter.setAttribute('aria-expanded', 'true');
+    document.documentElement.style.overflow = 'hidden';
+    const first = rail.querySelector('button');
+    if (first) first.focus();
+  }
+  function closeDrawer() {
+    rail.classList.remove('open');
+    backdrop.classList.remove('show');
+    btnFilter.setAttribute('aria-expanded', 'false');
+    document.documentElement.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  btnFilter.addEventListener('click', () => {
+    if (rail.classList.contains('open')) closeDrawer();
+    else openDrawer();
+  });
+  backdrop.addEventListener('click', closeDrawer);
+  $('#btnApply').addEventListener('click', closeDrawer);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && rail.classList.contains('open')) closeDrawer();
+  });
+
+  /* ---------- 事件：分类 / 筛选组 / 已选 chips ---------- */
+  $('#catChips').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-cat]');
+    if (!b) return;
+    state.cat = b.dataset.cat || null;
+    visible = PAGE;
+    renderCatChips(); renderRail(); renderActiveChips(); renderGrid(true);
+  });
+  $('#railBody').addEventListener('click', (e) => {
+    const rc = e.target.closest('[data-rcat]');
+    if (rc) { state.cat = rc.dataset.rcat || null; visible = PAGE; renderCatChips(); renderRail(); renderActiveChips(); renderGrid(true); return; }
+    const b = e.target.closest('[data-k]');
+    if (!b) return;
+    const set = state[b.dataset.k];
+    const v = b.dataset.v;
+    set.has(v) ? set.delete(v) : set.add(v);
+    visible = PAGE;
+    renderRail(); renderActiveChips(); renderGrid(true);
+  });
+  $('#activeChips').addEventListener('click', (e) => {
+    if (e.target.closest('[data-clear-all]')) { resetAll(); return; }
+    const b = e.target.closest('[data-del]');
+    if (!b) return;
+    if (b.dataset.del === 'cat') state.cat = null;
+    else state[b.dataset.del].delete(b.dataset.val);
+    visible = PAGE;
+    renderCatChips(); renderRail(); renderActiveChips(); renderGrid(true);
+  });
+  function resetAll() {
+    state.cat = null;
+    Object.keys(state).forEach(k => { if (k !== 'cat') state[k].clear(); });
+    visible = PAGE;
+    renderCatChips(); renderRail(); renderActiveChips(); renderGrid(true);
+    PG.toast('已清除全部筛选条件');
+  }
+  $('#btnReset').addEventListener('click', resetAll);
+  $('#btnLoosen').addEventListener('click', resetAll);
+
+  /* ---------- 加载更多（含骨架屏） ---------- */
+  $('#btnMore').addEventListener('click', () => {
+    const grid = $('#grid');
+    if (!PG.REDUCED) {
+      const sk = document.createElement('div');
+      sk.style.cssText = 'grid-column:1/-1';
+      sk.innerHTML = `<div class="grid">${PG.skeletonCards(4)}</div>`;
+      grid.appendChild(sk);
+    }
+    setTimeout(() => {
+      visible += PAGE;
+      renderGrid(false);
+      PG.toast(`已加载第 ${Math.ceil(visible / PAGE)} 页`);
+    }, PG.REDUCED ? 0 : 420);
+  });
+
+  /* ---------- 初始化 ---------- */
+  const urlCat = new URLSearchParams(location.search).get('cat');
+  if (urlCat && D.CAT_MAP[urlCat]) state.cat = urlCat;
+  renderCatChips();
+  renderRail();
+  renderActiveChips();
+  const grid = $('#grid');
+  grid.innerHTML = PG.skeletonCards(PAGE);
+  setTimeout(() => renderGrid(false), PG.REDUCED ? 0 : 650);
+  updateCounts(filtered().length);
+})();
+</script>
+</body>
+</html>

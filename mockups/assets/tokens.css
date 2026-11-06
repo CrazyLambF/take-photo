@@ -1,0 +1,130 @@
+/* ============================================================
+   摆拍手册 PoseGuide · 设计令牌 tokens.css（原型版）
+   依据《拍照姿势App项目计划.md》v1.0：
+   · §9 决策 #2  视觉风格 = 杂志感大图 ＋ 柔和点缀（奶油色/圆角，避免工具感）
+   · §5.5        标题衬线（Noto Serif SC + 系统宋体回退）、正文无衬线；阅读列 ≤ 680px
+   · §3.3        断点：mobile <768 / tablet 768–1199 / desktop ≥1200
+   · 本文件为唯一令牌来源：色彩 / 字体 / 字号 / 间距 / 圆角 / 阴影 / 动效 / 层级
+   ============================================================ */
+
+:root {
+  /* ---------- 色彩 · 暖纸底 + 陶土点缀 ---------- */
+  --c-bg:            #FAF7F1;   /* 奶油纸感页面底 */
+  --c-bg-soft:       #F2EBE0;   /* 分区底 / 骨架底 */
+  --c-surface:       #FFFFFF;   /* 卡片面 */
+  --c-surface-2:     #F8F3EB;   /* 卡片次面 */
+  --c-ink:           #221B14;   /* 主文字（对 --c-bg 对比 ≈ 15:1） */
+  --c-ink-2:         #5C5145;   /* 次级文字（≥ 4.5:1） */
+  --c-ink-3:         #8B7D6E;   /* 弱化文字（仅大字号 / 装饰性） */
+  --c-line:          #E8DFD1;   /* 分隔线 */
+  --c-line-strong:   #D5C8B4;
+
+  --c-accent:        #B4552F;   /* 陶土橘 · 填充/大元素（白字对比 4.9:1） */
+  --c-accent-deep:   #93411F;   /* 陶土橘 · 正文级彩色文字（≥ 4.5:1） */
+  --c-accent-soft:   #F6E4D7;   /* 点缀底 */
+  --c-sage:          #6E7F5E;   /* 灰绿辅助点缀 */
+  --c-sage-soft:     #E9EDE0;
+  --c-gold:          #C9A227;
+  --c-danger:        #C03B23;   /* 避坑/错误 */
+  --c-danger-soft:   #F9E3DE;
+  --c-on-accent:     #FFF9F4;
+  --c-scrim:         rgba(30, 22, 14, .46);
+
+  /* ---------- 字体 ---------- */
+  --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  --font-sans:  -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC",
+                "MiSans", "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+
+  /* ---------- 字号（12 基阶梯） ---------- */
+  --fs-11: .6875rem;   /* 11 页眉小字 */
+  --fs-12: .75rem;     /* 12 chip/角标 */
+  --fs-13: .8125rem;   /* 13 辅助 */
+  --fs-14: .875rem;    /* 14 卡片正文 */
+  --fs-15: .9375rem;   /* 15 正文 */
+  --fs-16: 1rem;       /* 16 正文/输入 */
+  --fs-18: 1.125rem;   /* 18 小标题 */
+  --fs-20: 1.25rem;    /* 20 卡片大标题 */
+  --fs-22: 1.375rem;   /* 22 区块标题 */
+  --fs-28: 1.75rem;    /* 28 页标题（移动） */
+  --fs-34: 2.125rem;   /* 34 页标题（桌面） */
+  --fs-44: 2.75rem;    /* 44 封面展示 */
+
+  /* ---------- 间距（4px 基） ---------- */
+  --sp-1: 4px;  --sp-2: 8px;   --sp-3: 12px; --sp-4: 16px; --sp-5: 20px;
+  --sp-6: 24px; --sp-8: 32px;  --sp-10: 40px; --sp-12: 48px;
+  --sp-16: 64px; --sp-20: 80px; --sp-24: 96px;
+
+  /* ---------- 圆角（柔和点缀） ---------- */
+  --r-xs: 6px; --r-sm: 10px; --r-md: 14px; --r-lg: 18px; --r-xl: 26px; --r-full: 999px;
+
+  /* ---------- 阴影（暖调、低透明、大扩散） ---------- */
+  --shadow-1: 0 1px 2px rgba(61,44,28,.05), 0 2px 10px rgba(61,44,28,.06);
+  --shadow-2: 0 6px 20px rgba(61,44,28,.11);
+  --shadow-3: 0 18px 48px rgba(61,44,28,.18);
+
+  /* ---------- 动效令牌（唯一时长/缓动来源，见 设计说明.md §动效） ---------- */
+  --dur-fast: 150ms;                                  /* 按压/hover 微交互 */
+  --dur-base: 240ms;                                  /* chips、按钮、心标 */
+  --dur-slow: 420ms;                                  /* 卡片进场、抽屉、轮播 */
+  --dur-page: 320ms;                                  /* 页面转场 */
+  --ease-out:   cubic-bezier(.22, 1, .36, 1);         /* 进场（ease-out，不线性） */
+  --ease-inout: cubic-bezier(.60, 0, .30, 1);         /* 抽屉/轮播位移 */
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);     /* 心标收藏等强调反馈 */
+  --stagger: 45ms;                                    /* 列表进场逐个延迟 */
+
+  /* ---------- 层级（10/20/… 刻度） ---------- */
+  --z-nav: 30; --z-chips: 25; --z-compare: 45; --z-drawer: 50;
+  --z-toast: 60; --z-lightbox: 70; --z-preview: 90;
+
+  /* ---------- 布局（§3.3） ---------- */
+  --container-tablet: 834px;   /* 平板内容区上限 */
+  --container-max: 1280px;     /* 桌面内容区上限 */
+  --reading-max: 680px;        /* 阅读列 ≤ 680px（§5.5） */
+  --topnav-h: 64px;
+  --tabbar-h: 58px;
+
+  color-scheme: light;
+}
+
+/* ---------- 深色模式（§3.3-6 / P0：跟随系统 + 手动开关） ---------- */
+[data-theme="dark"] {
+  --c-bg:            #17130E;
+  --c-bg-soft:       #201A13;
+  --c-surface:       #251E15;
+  --c-surface-2:     #2C2419;
+  --c-ink:           #F3EAE0;
+  --c-ink-2:         #C9BAA9;
+  --c-ink-3:         #97876F;
+  --c-line:          #3A3023;
+  --c-line-strong:   #4C4030;
+
+  --c-accent:        #E08A5E;
+  --c-accent-deep:   #EFA379;
+  --c-accent-soft:   #3A2A1D;
+  --c-sage:          #A4B591;
+  --c-sage-soft:     #2A2E21;
+  --c-gold:          #D9B54A;
+  --c-danger:        #E5765E;
+  --c-danger-soft:   #3D241C;
+  --c-on-accent:     #24150C;
+  --c-scrim:         rgba(0, 0, 0, .58);
+
+  --shadow-1: 0 1px 2px rgba(0,0,0,.3), 0 2px 10px rgba(0,0,0,.25);
+  --shadow-2: 0 6px 20px rgba(0,0,0,.4);
+  --shadow-3: 0 18px 48px rgba(0,0,0,.55);
+
+  color-scheme: dark;
+}
+
+/* ============================================================
+   动效降级：prefers-reduced-motion（任务硬性要求）
+   —— 所有 animation/transition 收敛为瞬时，滚动改为即时
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

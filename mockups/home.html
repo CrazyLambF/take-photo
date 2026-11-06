@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>摆拍手册 PoseGuide · 首页 · 发现</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23B4552F'/%3E%3Ccircle cx='12' cy='12' r='4.5' fill='%23FAF7F1'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<script>
+  document.documentElement.classList.add('js');
+  try { var t = localStorage.getItem('pg-theme');
+    if (t) document.documentElement.dataset.theme = t;
+    else if (matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'dark';
+  } catch (e) {}
+</script>
+<style>
+/* ---------- 首页 · 发现（§3.1 / §3.3 分页面布局） ---------- */
+
+/* 今日推荐：移动横滑 → 桌面 3 列大卡 */
+.hero-row { display: grid; grid-auto-flow: column; grid-auto-columns: min(68vw, 300px); overflow-x: auto;
+  scroll-snap-type: x mandatory; padding: 2px 2px var(--sp-3); scrollbar-width: none; margin-inline: calc(-1 * var(--sp-4)); padding-inline: var(--sp-4); }
+.hero-row::-webkit-scrollbar { display: none; }
+.hero-card { position: relative; scroll-snap-align: start; border-radius: var(--r-lg); }
+.hero-link { display: block; border-radius: var(--r-lg); }
+.hero-cover { position: relative; aspect-ratio: 3 / 4; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-1);
+  transition: box-shadow var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out); }
+.hero-cover svg { width: 100%; height: 100%; }
+.hero-card:hover .hero-cover { box-shadow: var(--shadow-2); transform: translateY(-3px); }
+.hero-overlay { position: absolute; inset: auto 0 0 0; padding: 44px var(--sp-4) var(--sp-4);
+  background: linear-gradient(to top, rgba(24,16,9,.72), rgba(24,16,9,0)); color: #FBF6EE; border-radius: 0 0 var(--r-lg) var(--r-lg); }
+.hero-cat { font-size: var(--fs-11); letter-spacing: .12em; opacity: .85; }
+.hero-name { font-family: var(--font-serif); font-size: var(--fs-20); margin-top: 2px; }
+.hero-cam { font-size: var(--fs-12); opacity: .85; margin-top: 4px; }
+.hero-refresh { color: var(--c-ink-2); }
+@media (min-width: 768px) {
+  .hero-row { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); overflow: visible; margin-inline: 0; padding-inline: 0; }
+  .hero-name { font-size: var(--fs-22); }
+}
+
+/* 十类入口：移动 2 列 → 平板 5 列 → 桌面单行 10 格（§3.3） */
+.cats { margin-top: var(--sp-8); }
+.cats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); }
+.cat-tile { display: flex; flex-direction: column; gap: var(--sp-1); padding: var(--sp-3);
+  border-radius: var(--r-md); border: 1px solid color-mix(in srgb, var(--c-line) 70%, transparent);
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); }
+.cat-tile:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
+.cat-tile:active { transform: scale(.97); }
+.cat-mono { width: 40px; height: 40px; border-radius: var(--r-sm); display: grid; place-items: center;
+  font-family: var(--font-serif); font-weight: 700; font-size: var(--fs-14); color: rgba(40,28,18,.8); }
+.cat-name { font-size: var(--fs-14); font-weight: 600; color: var(--c-ink); margin-top: var(--sp-1); }
+.cat-n { font-size: var(--fs-11); color: var(--c-ink-3); }
+@media (min-width: 768px) {
+  .cats-grid { grid-template-columns: repeat(5, 1fr); gap: var(--sp-4); }
+  .cat-tile { background: var(--c-surface); border: 1px solid var(--c-line); }
+}
+@media (min-width: 1200px) {
+  .cats-grid { grid-template-columns: repeat(10, 1fr); gap: var(--sp-3); }
+  .cat-name { font-size: var(--fs-12); }
+  .cat-n { font-size: var(--fs-11); }
+}
+
+/* 主题合集：横滑 → 桌面 3 列 */
+.collections { margin-top: var(--sp-10); }
+.col-row { display: grid; grid-auto-flow: column; grid-auto-columns: min(78vw, 320px); overflow-x: auto;
+  scroll-snap-type: x mandatory; padding-bottom: var(--sp-3); margin-inline: calc(-1 * var(--sp-4)); padding-inline: var(--sp-4); }
+.col-row::-webkit-scrollbar { display: none; }
+.col-card { position: relative; scroll-snap-align: start; border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 16 / 9; cursor: pointer;
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); }
+.col-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+.col-cover { position: absolute; inset: 0; }
+.col-cover svg { width: 100%; height: 100%; }
+.col-txt { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: var(--sp-4);
+  background: linear-gradient(to top, rgba(24,16,9,.66), rgba(24,16,9,0) 62%); color: #FBF6EE; }
+.col-txt h3 { font-family: var(--font-serif); font-size: var(--fs-18); }
+.col-txt p { font-size: var(--fs-12); opacity: .85; margin-top: 2px; }
+@media (min-width: 768px) {
+  .col-row { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); overflow: visible; margin-inline: 0; padding-inline: 0; }
+}
+
+/* 卡片流：杂志网格（§5.1 桌面每隔数行 1 张跨 2 列） */
+.feed { margin-top: var(--sp-10); }
+.feed-note { font-size: var(--fs-12); color: var(--c-ink-3); margin-top: var(--sp-4); text-align: center; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<!-- 桌面/平板顶导航（§3.3-2） -->
+<header class="topnav">
+  <div class="container topnav-in">
+    <a class="brand" href="index.html" data-nav><span class="brand-cn">摆拍手册</span><span class="brand-en">PoseGuide</span></a>
+    <nav class="topnav-links" aria-label="主导航">
+      <a href="home.html" data-nav aria-current="page">首页 · 发现</a>
+      <a href="library.html" data-nav>姿势库</a>
+      <a href="#" data-toast="「收藏与清单」页未包含在本轮 4 页原型中（见设计说明·待确认）">收藏与清单</a>
+      <a href="#" data-toast="「我的」页未包含在本轮 4 页原型中（见设计说明·待确认）">我的</a>
+    </nav>
+    <button class="topnav-search" data-toast="搜索页为 P0（计划 §3.1），本轮原型未包含" aria-label="搜索姿势、标签">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20.3 20.3-3.9-3.9"/></svg>
+      <span>搜索姿势 / 标签 / 拼音首字母</span>
+    </button>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深色模式"></button>
+  </div>
+</header>
+
+<!-- 移动顶栏 -->
+<header class="m-header">
+  <a class="brand" href="index.html" data-nav><span class="brand-cn">摆拍手册</span></a>
+  <span class="spacer" style="margin-left:auto"></span>
+  <button class="icon-btn" data-toast="搜索页为 P0（计划 §3.1），本轮原型未包含" aria-label="搜索"></button>
+  <button class="icon-btn" data-theme-toggle aria-label="切换深色模式"></button>
+</header>
+
+<main id="main">
+  <!-- ① 今日推荐（每日 3 个轮换） -->
+  <section class="container" style="padding-top: var(--sp-6)" aria-labelledby="h-hero">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Today’s Picks</p>
+      <h2 id="h-hero">今日推荐</h2>
+      <span class="meta" id="heroDate"></span>
+      <button class="icon-btn" id="btnShuffle" aria-label="换一批今日推荐" title="换一批（演示轮换机制）" style="margin-left:8px"></button>
+    </div>
+    <div class="hero-row" id="heroRow"></div>
+  </section>
+
+  <!-- ② 十类入口 -->
+  <section class="cats container" aria-labelledby="h-cats">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Categories</p>
+      <h2 id="h-cats">十类姿势</h2>
+      <span class="meta">100 个机位与摆拍 · 每类 10 条</span>
+    </div>
+    <div class="cats-grid" id="catsGrid"></div>
+  </section>
+
+  <!-- ③ 主题合集 -->
+  <section class="collections container" aria-labelledby="h-col">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Collections</p>
+      <h2 id="h-col">主题合集</h2>
+      <a class="more" href="#" data-toast="合集列表与合集详情页未包含在本轮原型">全部合集 →</a>
+    </div>
+    <div class="col-row" id="colRow"></div>
+  </section>
+
+  <!-- ④ 卡片流 -->
+  <section class="feed container" aria-labelledby="h-feed">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">For You</p>
+      <h2 id="h-feed">为你推荐</h2>
+      <a class="more" href="library.html" data-nav>进入姿势库 →</a>
+    </div>
+    <div class="grid" id="feedGrid" aria-live="polite"></div>
+    <p class="feed-note">原型示例数据 24 / 100 条 · 收藏心标桌面端悬停浮现，触屏常显</p>
+  </section>
+</main>
+
+<!-- 移动底部 Tabbar（§3.3-2） -->
+<nav class="tabbar" aria-label="底部导航"></nav>
+
+<script src="assets/mock-data.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/preview.js"></script>
+<script>
+(function () {
+  const PG = window.PG, D = PG.data;
+  const $ = (s) => document.querySelector(s);
+
+  /* 导航图标（app.js 图标库） */
+  document.querySelector('.m-header [data-toast]').innerHTML = PG.I('search', 20);
+  $('.tabbar').innerHTML = [
+    `<a href="home.html" data-nav aria-current="page">${PG.I('compass', 22)}首页</a>`,
+    `<a href="library.html" data-nav>${PG.I('grid', 22)}姿势库</a>`,
+    `<a href="#" data-toast="「收藏与清单」页未包含在本轮原型">${PG.I('heart', 22)}收藏<span class="tab-badge" data-fav-badge hidden></span></a>`,
+    `<a href="#" data-toast="「我的」页未包含在本轮原型">${PG.I('user', 22)}我的</a>`,
+  ].join('');
+  $('#btnShuffle').innerHTML = PG.I('refresh', 19);
+  $('#btnShuffle').addEventListener('click', () => { heroOffset++; renderHero(true); });
+
+  /* ① 今日推荐：按日期确定性轮换，演示「每日 3 个」 */
+  const DAY = Math.floor(Date.now() / 864e5);
+  let heroOffset = 0;
+  function heroCard(p) {
+    const cat = D.CAT_MAP[p.cat];
+    return `<article class="hero-card">
+      <a class="hero-link" href="detail.html?id=${p.id}" data-nav aria-label="${p.name}，${cat.name}">
+        <div class="hero-cover" role="img" aria-label="${p.name}（${p.steps[0]}）示例占位图">${D.poseSVG(p, 'cover')}</div>
+        <div class="hero-overlay">
+          <span class="hero-cat">${cat.name}</span>
+          <h3 class="hero-name">${p.name}</h3>
+          <p class="hero-cam">${p.cam.split('，')[0]}</p>
+        </div>
+        ${p.ai ? `<span class="badge-ai" style="top:12px;left:12px">${PG.I('sparkle', 11)}AI 示意</span>` : ''}
+      </a>
+      <button class="heart ${PG.favs.has(p.id) ? 'on' : ''}" data-fav="${p.id}" aria-pressed="${PG.favs.has(p.id)}" aria-label="收藏「${p.name}」">${PG.I('heart', 18)}</button>
+    </article>`;
+  }
+  function renderHero(withSkeleton) {
+    const row = $('#heroRow');
+    const fill = () => {
+      const now = new Date();
+      $('#heroDate').textContent = `${now.getMonth() + 1} 月 ${now.getDate()} 日 · 每日 3 个轮换`;
+      /* 步长 8 轮换，保证 3 张卡跨不同分类 */
+      row.innerHTML = [0, 1, 2].map(i => heroCard(D.POSES[(DAY * 8 + heroOffset + i * 8) % D.POSES.length])).join('');
+      PG.assignStagger(row);
+    };
+    if (withSkeleton && !PG.REDUCED) {
+      row.innerHTML = [1, 2, 3].map(() => `<div class="hero-card"><div class="hero-cover skeleton"></div></div>`).join('');
+      setTimeout(fill, 420);
+    } else fill();
+  }
+  renderHero(false);
+
+  /* ② 十类入口 */
+  $('#catsGrid').innerHTML = D.CATS.map(c => `
+    <a class="cat-tile" href="library.html?cat=${c.id}" data-nav aria-label="${c.name}，共 ${c.total} 条"
+       style="background:linear-gradient(135deg,${c.tint[0]}2E,${c.tint[1]}14)">
+      <span class="cat-mono" style="background:linear-gradient(135deg,${c.tint[0]},${c.tint[1]})">${c.short[0]}</span>
+      <span class="cat-name">${c.short}</span>
+      <span class="cat-n">${c.total} 条</span>
+    </a>`).join('');
+
+  /* ③ 主题合集（标题为占位示例，见待确认清单） */
+  const collections = [
+    { t: '闺蜜出游必拍', s: '12 个姿势 · 双人互动', p: D.POSES.find(x => x.id === 'DUO-04') },
+    { t: '窗光与生活感', s: '10 个姿势 · 室内居家', p: D.POSES.find(x => x.id === 'HOME-01') },
+    { t: '黄金时刻 · 日落前一小时', s: '8 个姿势 · 逆光与氛围', p: D.POSES.find(x => x.id === 'BACK-08') },
+  ];
+  $('#colRow').innerHTML = collections.map(c => `
+    <div class="col-card" data-reveal data-toast="主题合集详情未包含在本轮原型（标题为占位示例）" role="button" tabindex="0">
+      <div class="col-cover" aria-hidden="true">${D.poseSVG(c.p, 'cover')}</div>
+      <div class="col-txt"><h3>${c.t}</h3><p>${c.s}</p></div>
+    </div>`).join('');
+
+  /* ④ 卡片流：骨架屏 → 内容（§5.1） */
+  const feedGrid = $('#feedGrid');
+  feedGrid.innerHTML = PG.skeletonCards(10);
+  setTimeout(() => {
+    feedGrid.innerHTML = D.POSES
+      .slice().sort((a, b) => ((DAY + a.id.length) % 7) - ((DAY + b.id.length) % 7))
+      .map((p, i) => PG.poseCard(p, { feature: i === 3 }))
+      .join('');
+    PG.assignStagger(feedGrid);
+  }, PG.REDUCED ? 0 : 750);
+})();
+</script>
+</body>
+</html>

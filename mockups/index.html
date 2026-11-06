@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>摆拍手册 PoseGuide · 高保真原型评估入口</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23B4552F'/%3E%3Ccircle cx='12' cy='12' r='4.5' fill='%23FAF7F1'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<script>
+  document.documentElement.classList.add('js');
+  try { var t = localStorage.getItem('pg-theme');
+    if (t) document.documentElement.dataset.theme = t;
+    else if (matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'dark';
+  } catch (e) {}
+</script>
+<style>
+.cover { padding-top: var(--sp-12); max-width: var(--reading-max); margin-inline: auto; text-align: left; }
+.cover .eyebrow { font-size: var(--fs-11); letter-spacing: .24em; text-transform: uppercase; color: var(--c-accent-deep); font-weight: 600; }
+.cover h1 { font-size: var(--fs-34); letter-spacing: .03em; margin-top: var(--sp-2); }
+.cover .sub { color: var(--c-ink-2); margin-top: var(--sp-3); font-size: var(--fs-15); }
+@media (min-width: 768px) { .cover { text-align: center; padding-top: var(--sp-16); } .cover h1 { font-size: var(--fs-44); } }
+
+.pages { display: grid; grid-template-columns: 1fr; gap: var(--sp-4); margin-top: var(--sp-10); }
+@media (min-width: 768px) { .pages { grid-template-columns: repeat(2, 1fr); gap: var(--sp-5); } }
+.page-card { display: block; background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-lg); overflow: hidden;
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); }
+.page-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+.page-thumb { aspect-ratio: 16 / 9; overflow: hidden; }
+.page-thumb svg { width: 100%; height: 100%; }
+.page-body { padding: var(--sp-4) var(--sp-5) var(--sp-5); }
+.page-body h2 { font-size: var(--fs-18); display: flex; align-items: baseline; gap: 10px; }
+.page-body h2 small { font-size: var(--fs-11); color: var(--c-ink-3); letter-spacing: .08em; font-family: var(--font-sans); font-weight: 400; }
+.page-body p { font-size: var(--fs-13); color: var(--c-ink-2); margin-top: 6px; }
+.page-body ul { margin-top: var(--sp-3); }
+.page-body li { position: relative; padding-left: 16px; font-size: var(--fs-12); color: var(--c-ink-3); padding-block: 2px; }
+.page-body li::before { content: ""; position: absolute; left: 2px; top: 10px; width: 5px; height: 5px; border-radius: 50%; background: var(--c-accent); }
+
+.guide { margin-top: var(--sp-12); max-width: var(--reading-max); margin-inline: auto; }
+.guide h2 { font-size: var(--fs-20); margin-bottom: var(--sp-4); }
+.guide ol { counter-reset: g; }
+.guide li { counter-increment: g; position: relative; padding-left: 34px; padding-block: 7px; font-size: var(--fs-14); color: var(--c-ink-2); }
+.guide li::before { content: counter(g); position: absolute; left: 0; top: 9px; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--c-ink); color: var(--c-bg); font-size: var(--fs-12); font-weight: 600; display: grid; place-items: center; }
+.guide b { color: var(--c-ink); font-weight: 600; }
+.doc-link { display: inline-flex; align-items: center; gap: 8px; margin-top: var(--sp-6); padding: 12px 20px;
+  border: 1px solid var(--c-line-strong); border-radius: var(--r-full); font-size: var(--fs-14); color: var(--c-ink-2);
+  transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out); }
+.doc-link:hover { border-color: var(--c-accent); color: var(--c-accent-deep); background: var(--c-accent-soft); }
+</style>
+</head>
+<body>
+<main id="main" style="padding-bottom: var(--sp-16)">
+  <header class="cover container">
+    <p class="eyebrow">PoseGuide · Hi-Fi Prototype v0.1</p>
+    <h1>摆拍手册 · 主要页面原型</h1>
+    <p class="sub">依据《拍照姿势App项目计划.md》v1.0（§3 页面结构 / §5 展示交互 / §9 决策 #2「杂志感大图＋柔和点缀」）制作的静态高保真原型。<br>纯 HTML/CSS/JS，无框架与外部依赖，图为内联 SVG 渐变占位。</p>
+  </header>
+
+  <section class="pages container" style="max-width: 1080px" aria-label="原型页面">
+    <a class="page-card" href="home.html" data-reveal>
+      <div class="page-thumb" id="th1" aria-hidden="true"></div>
+      <div class="page-body">
+        <h2>首页 · 发现 <small>/ home</small></h2>
+        <p>今日推荐（每日 3 个轮换）→ 十类入口 → 主题合集 → 卡片流</p>
+        <ul><li>卡片流骨架屏 → 内容进场（stagger）</li><li>十类入口：移动 2 列 → 桌面单行 10 格</li><li>心标桌面悬停浮现 / 触屏常显</li></ul>
+      </div>
+    </a>
+    <a class="page-card" href="library.html" data-reveal>
+      <div class="page-thumb" id="th2" aria-hidden="true"></div>
+      <div class="page-body">
+        <h2>姿势库 ＋ 筛选面板 <small>/ library</small></h2>
+        <p>分类 chips 横滑 ＋ 多维筛选（维度内 OR、维度间 AND）</p>
+        <ul><li>移动＝底部抽屉 / 桌面＝左侧栏常驻 / 平板＝点开</li><li>实时「命中 n 条」· 已选 chips 可删可清空</li><li>空结果「放宽条件」建议 · 对比浮条「已选 n/3」</li></ul>
+      </div>
+    </a>
+    <a class="page-card" href="detail.html?id=ST-02" data-reveal>
+      <div class="page-thumb" id="th3" aria-hidden="true"></div>
+      <div class="page-body">
+        <h2>姿势详情 <small>/ detail · 示例 ST-02</small></h2>
+        <p>图集轮播（示例/线稿/错误示范）→ 机位卡 → 分步要点 → 避坑 → 小贴士</p>
+        <ul><li>桌面双栏：图集 sticky ＋ 操作按钮 sticky</li><li>移动：单列纵排 ＋ 底部固定操作栏</li><li>轮播支持拖拽/箭头/圆点/键盘 ←→，点击放大</li></ul>
+      </div>
+    </a>
+    <a class="page-card" href="detail.html?id=DUO-04" data-reveal>
+      <div class="page-thumb" id="th4" aria-hidden="true"></div>
+      <div class="page-body">
+        <h2>详情 · 双人示例 <small>/ detail · DUO-04</small></h2>
+        <p>同一详情模板换数据（额头相抵 · 双人 · 逆光）</p>
+        <ul><li>验证模板对多人/不同机位数据的适配</li><li>深色模式令牌三档生效（右上角切换）</li></ul>
+      </div>
+    </a>
+  </section>
+
+  <section class="guide container" aria-labelledby="h-guide">
+    <h2 id="h-guide" data-reveal>如何评估</h2>
+    <ol data-reveal>
+      <li>建议用 <b>Chrome / Edge</b> 打开各页面；每页<b>左下角「390 预览」</b>可在桌面浏览器中直接查看移动端布局（iframe 内媒体查询按 390px 生效）。</li>
+      <li>直接<b>缩放窗口</b>验证断点：<b>&lt;768px</b> 底部 Tabbar ＋ 2 列网格；<b>768–1199px</b> 顶部导航；<b>≥1200px</b> 桌面双栏/多列与筛选侧栏常驻（重点看 390 与 1440 两档）。</li>
+      <li>动效清单：页面转场（离场/进场）、卡片流骨架屏与 stagger 进入、详情图集轮播、筛选抽屉与侧栏、心标/按钮/卡片微交互——统一走 tokens.css 的时长与缓动令牌。</li>
+      <li>系统开启「减弱动态效果」后再访问，可验证 <b>prefers-reduced-motion</b> 降级（动效瞬时完成、骨架屏停闪）。</li>
+      <li>收藏 / 对比 / 深色模式状态会写入 localStorage，跨页面保持；「收藏与清单、我的、搜索、对比页」不在本轮 4 页范围，入口以 Toast 说明。</li>
+      <li>设计令牌、动效规范与待确认清单见同目录 <b>设计说明.md</b>。</li>
+    </ol>
+    <a class="doc-link" href="设计说明.md" data-reveal>📄 打开设计说明（设计令牌 · 动效规范 · 评估要点 · 待确认）</a>
+  </section>
+</main>
+
+<script src="assets/mock-data.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/preview.js"></script>
+<script>
+(function () {
+  const D = window.PG.data;
+  const demo = ['ST-02', 'STREET-01', 'CAFE-04', 'DUO-04'];
+  ['th1', 'th2', 'th3', 'th4'].forEach((id, i) => {
+    const p = D.POSES.find(x => x.id === demo[i]);
+    document.getElementById(id).innerHTML = D.poseSVG(p, 'cover');
+  });
+  window.PG.assignStagger();
+})();
+</script>
+</body>
+</html>

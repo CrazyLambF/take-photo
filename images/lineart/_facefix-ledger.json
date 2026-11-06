@@ -1,0 +1,354 @@
+{
+ "runs": [
+  {
+   "pose": "SIT-08",
+   "at": "2026-11-05T16:31:00",
+   "ctl": "_ctl2/SIT-08.png",
+   "model": "doubao-seedream-5-0-flash-260915",
+   "price": 0.12,
+   "ok": true,
+   "seed": 1858963154,
+   "out_bytes": 16603,
+   "post": [
+    5,
+    1
+   ],
+   "face": {
+    "inside_comps": 8,
+    "inside_px": 864,
+    "face_density": 0.07634,
+    "head_w": 131,
+    "head_h": 135,
+    "body_h": 796,
+    "comp_px": [
+     231,
+     216,
+     180,
+     167,
+     20,
+     17,
+     17,
+     16
+    ]
+   },
+   "replaced": true,
+   "note": "人工复核：封面为双膝跪坐（正座），候选版双膝跪坐+双手交叠+有五官，比旧版（单膝半跪+空白脸）更贴封面，已采用",
+   "pose_sim": {
+    "chamfer": 1.639,
+    "sil_iou": 0.429,
+    "h_ratio": 0.991,
+    "w_ratio": 0.914
+   },
+   "verdict": "采用候选版（人工推翻原判定）",
+   "face_final": {
+    "inside_comps": 3,
+    "inside_px": 70,
+    "face_density": 0.00659,
+    "head_w": 122,
+    "head_h": 136,
+    "body_h": 803,
+    "comp_px": [
+     36,
+     20,
+     14
+    ]
+   }
+  },
+  {
+   "at": "2026-11-05T16:33:24",
+   "ctl": "_ctl/PROP-09.png",
+   "model": "doubao-seedream-5-0-flash-260915",
+   "price": 0.12,
+   "ok": true,
+   "seed": 840529338,
+   "out_bytes": 15834,
+   "ink_ratio": 0.0261,
+   "post": [
+    5,
+    1
+   ],
+   "face": {
+    "inside_comps": 9,
+    "inside_px": 890,
+    "face_density": 0.03256,
+    "head_w": 226,
+    "head_h": 189,
+    "body_h": 1116,
+    "comp_px": [
+     167,
+     154,
+     145,
+     143,
+     142,
+     70,
+     35,
+     20
+    ]
+   },
+   "replaced": true,
+   "latency_s": 17.3,
+   "spent": 0.24,
+   "pose": "PROP-09",
+   "pose_sim": {
+    "chamfer": 0.196,
+    "sil_iou": 0.734,
+    "h_ratio": 1.004,
+    "w_ratio": 0.99
+   },
+   "verdict": "五官完整（眉眼鼻唇）、双手叉腰与旧版一致",
+   "face_final": {
+    "inside_comps": 9,
+    "inside_px": 890,
+    "face_density": 0.03256,
+    "head_w": 226,
+    "head_h": 189,
+    "body_h": 1116,
+    "comp_px": [
+     167,
+     154,
+     145,
+     143,
+     142,
+     70,
+     35,
+     20
+    ]
+   }
+  },
+  {
+   "at": "2026-11-05T16:33:39",
+   "ctl": "_ctl/PROP-10.png",
+   "model": "doubao-seedream-5-0-flash-260915",
+   "price": 0.12,
+   "ok": true,
+   "seed": 742126535,
+   "out_bytes": 14683,
+   "ink_ratio": 0.0255,
+   "post": [
+    5,
+    1
+   ],
+   "face": {
+    "inside_comps": 10,
+    "inside_px": 799,
+    "face_density": 0.02835,
+    "head_w": 227,
+    "head_h": 194,
+    "body_h": 1144,
+    "comp_px": [
+     174,
+     158,
+     125,
+     121,
+     96,
+     56,
+     21,
+     19
+    ]
+   },
+   "replaced": true,
+   "latency_s": 14.7,
+   "spent": 0.36,
+   "pose": "PROP-10",
+   "pose_sim": {
+    "chamfer": 0.086,
+    "sil_iou": 0.354,
+    "h_ratio": 0.999,
+    "w_ratio": 1.0
+   },
+   "verdict": "五官完整、手扶胸前与旧版一致",
+   "face_final": {
+    "inside_comps": 10,
+    "inside_px": 799,
+    "face_density": 0.02835,
+    "head_w": 227,
+    "head_h": 194,
+    "body_h": 1144,
+    "comp_px": [
+     174,
+     158,
+     125,
+     121,
+     96,
+     56,
+     21,
+     19
+    ]
+   }
+  },
+  {
+   "at": "2026-11-05T16:33:59",
+   "ctl": "_ctl/SCENE-02.png",
+   "model": "doubao-seedream-5-0-flash-260915",
+   "price": 0.12,
+   "ok": true,
+   "seed": 1541708730,
+   "out_bytes": 15622,
+   "ink_ratio": 0.03,
+   "post": [
+    5,
+    1
+   ],
+   "face": {
+    "inside_comps": 8,
+    "inside_px": 945,
+    "face_density": 0.04202,
+    "head_w": 183,
+    "head_h": 192,
+    "body_h": 1133,
+    "comp_px": [
+     237,
+     210,
+     205,
+     163,
+     74,
+     21,
+     18,
+     17
+    ]
+   },
+   "replaced": true,
+   "latency_s": 20.4,
+   "spent": 0.48,
+   "pose": "SCENE-02",
+   "pose_sim": {
+    "chamfer": 0.66,
+    "sil_iou": 0.652,
+    "h_ratio": 0.912,
+    "w_ratio": 0.977
+   },
+   "verdict": "五官完整、横向伸臂手势一致（旧图手臂自胸口长出，新图连到肩）",
+   "face_final": {
+    "inside_comps": 8,
+    "inside_px": 945,
+    "face_density": 0.04202,
+    "head_w": 183,
+    "head_h": 192,
+    "body_h": 1133,
+    "comp_px": [
+     237,
+     210,
+     205,
+     163,
+     74,
+     21,
+     18,
+     17
+    ]
+   }
+  },
+  {
+   "at": "2026-11-05T16:34:15",
+   "ctl": "_ctl/SCENE-03.png",
+   "model": "doubao-seedream-5-0-flash-260915",
+   "price": 0.12,
+   "ok": true,
+   "seed": 1831533697,
+   "out_bytes": 14703,
+   "ink_ratio": 0.0274,
+   "post": [
+    5,
+    1
+   ],
+   "face": {
+    "inside_comps": 8,
+    "inside_px": 904,
+    "face_density": 0.03138,
+    "head_w": 232,
+    "head_h": 194,
+    "body_h": 1142,
+    "comp_px": [
+     186,
+     184,
+     126,
+     124,
+     122,
+     108,
+     34,
+     20
+    ]
+   },
+   "replaced": false,
+   "latency_s": 15.6,
+   "spent": 0.6,
+   "pose": "SCENE-03",
+   "pose_sim": {
+    "chamfer": 0.55,
+    "sil_iou": 0.713,
+    "h_ratio": 0.937,
+    "w_ratio": 0.962
+   },
+   "verdict": "新图漏画双手（旧图有清晰交握），按铁则保留旧图",
+   "face_final": {
+    "inside_comps": 1,
+    "inside_px": 23,
+    "face_density": 0.00072,
+    "head_w": 240,
+    "head_h": 207,
+    "body_h": 1219,
+    "comp_px": [
+     23
+    ]
+   }
+  },
+  {
+   "at": "2026-11-05T16:34:31",
+   "ctl": "_ctl/SIT-02.png",
+   "model": "doubao-seedream-5-0-flash-260915",
+   "price": 0.12,
+   "ok": true,
+   "seed": 1563869649,
+   "out_bytes": 13334,
+   "ink_ratio": 0.049,
+   "post": [
+    24,
+    1
+   ],
+   "face": {
+    "inside_comps": 4,
+    "inside_px": 1022,
+    "face_density": 0.05203,
+    "head_w": 149,
+    "head_h": 206,
+    "body_h": 1217,
+    "comp_px": [
+     321,
+     285,
+     251,
+     165
+    ]
+   },
+   "replaced": true,
+   "latency_s": 17.0,
+   "spent": 0.72,
+   "pose": "SIT-02",
+   "pose_sim": {
+    "chamfer": 0.401,
+    "sil_iou": 0.112,
+    "h_ratio": 1.005,
+    "w_ratio": 1.009
+   },
+   "verdict": "五官清晰、坐姿一致；新 raw 偏重，2 色调色板编码压到 13.02KB",
+   "face_final": {
+    "inside_comps": 9,
+    "inside_px": 1292,
+    "face_density": 0.06374,
+    "head_w": 153,
+    "head_h": 207,
+    "body_h": 1220,
+    "comp_px": [
+     321,
+     315,
+     251,
+     180,
+     63,
+     60,
+     46,
+     35
+    ]
+   }
+  }
+ ],
+ "spent": 0.72,
+ "total_run_spend": 0.72
+}

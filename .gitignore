@@ -1,0 +1,50 @@
+# ---------- 依赖 ----------
+node_modules/
+tools/pydeps/
+
+# ---------- 构建产物 ----------
+dist/
+coverage/
+*.tsbuildinfo
+
+# ---------- Python ----------
+__pycache__/
+*.pyc
+.venv/
+
+# ---------- 模型权重（体积大且可下载，见 README）----------
+tools/models/*.task
+
+# ---------- 系统 / 编辑器 ----------
+.DS_Store
+.vscode/
+.idea/
+
+# ---------- 环境变量 ----------
+.env
+.env.*
+!.env.example
+
+# ---------- 图像中间产物（成品已在 app/public 与 images/lineart/*.png）----------
+# 旧图集与实验产物
+images/archive-v1/
+images/archive-duo/
+images/compare/
+images/_eval/
+images/pilot/
+images/test/
+
+# 单张封面原件：与 app/public/poses/*/cover.jpg 重复
+/images/*.jpg
+
+# 线稿工作文件
+images/lineart/raw/
+images/lineart/final/
+images/lineart/_*
+
+# 面部修复台账需保留（文档引用），在上面通配之后单独放回
+!images/lineart/_facefix-ledger.json
+
+# 骨架只保留 SVG 源
+images/lineart/skeleton/*.png
+images/lineart/skeleton/_ai-input/

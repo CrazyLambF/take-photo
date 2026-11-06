@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" role="img" aria-label="线稿占位图">
+  <rect width="300" height="400" fill="#F2EBE0"/>
+  <g fill="none" stroke="#B8A98F" stroke-width="3" stroke-linecap="round">
+    <circle cx="150" cy="118" r="34"/>
+    <path d="M150 152v96"/>
+    <path d="M150 176l-46 44M150 176l46 44"/>
+    <path d="M150 248l-34 108M150 248l34 108"/>
+  </g>
+  <text x="150" y="386" text-anchor="middle" font-size="14" fill="#8B7D6E">线稿示意 · 制作中</text>
+</svg>
